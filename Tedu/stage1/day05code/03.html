@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪类选择器2</title>
+		<style>
+			span{
+				color: transparent;
+			}
+			/* 当input获得焦点时，修改它的背景颜色 */
+			input:focus{
+				background-color: yellow;
+			}
+			/* 当input获得焦点时，选中相邻兄弟修改颜色 */
+			input:focus+span{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text"><span>请输入合法的用户名！</span>
+	</body>
+</html>

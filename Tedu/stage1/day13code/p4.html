@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>vh 单飞翼布局</title>
+		<style>
+			.box{
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+			}
+			.left{
+				background-color: red;
+				flex: 0 0 230px;
+			}
+			.right{
+				flex: 1;
+				background-color:blue;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据渲染</title>
+	</head>
+	<body>
+		<div id="box" style="">
+			
+		</div>
+		<script>
+			var com = {
+				title:'小米13',
+				price:4999.00
+			}
+			// var str = '标题：'+com.title+'<br>'+'价格：'+com.price
+			// 模板字符串
+			var str =`
+			标题：${com.title} <br>
+			价格：${com.price}
+			`
+			box.innerHTML = str
+		</script>
+	</body>
+</html>

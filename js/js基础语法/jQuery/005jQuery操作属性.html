@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery/jquery.js"></script>
+</head>
+<body>
+    
+    <div id="box" hello="world">
+        这是一个div标签
+    </div>
+
+    <script>
+        /*
+        操作元素属性
+        1.attr()
+        => 可以进行设置和获取元素的属性
+        => 注意:一般用于操作元素的自定义属性
+        => 注意：attr操作的所有属性都会直接出现在元素的标签身上
+        => 获取：
+            -> 语法：元素.attr(属性名)
+            -> 返回值：该属性名对应的属性值
+        => 设置：
+            -> 语法：attr('属性名'，'属性值')
+        2.removeAttr()
+        => 对元素的属性进行删除操作
+        => 语法：元素集合.removeAttr(你要删除的属性名)
+        */ 
+
+        // // 获取
+        // console.log($('div').attr('hello'))
+        // // 设置
+        // $('div').attr('a',100)
+        // // 删除
+        // $('div').removeAttr('a')
+
+        /*
+        1.prop()
+        + 可以获取和设置元素的属性
+            => 注意：当prop 设置元素的原生属性，会直接响应在元素标签身上
+            => 当prop 设置元素的自定义属性，不会直接响应在元素标签身上，会响应在元素对象身上
+            => prop 方法不能获取元素标签身上的自定义属性，只能获取到prop方法自己设置的自定义属性
+        + prop（） 设置
+        => 语法：元素集合.prop('属性名'，'属性值')
+        + prop() 获取
+        => 语法：元素集合.prop(需要获取的属性名)
+        => 返回值就是属性对应的值
+
+        2.removeProp（）
+        + 用来删除属性的方法
+        + 注意：
+            不能删除原生属性
+            只能删除由prop方法设置的自定义的属性
+        */ 
+        // 设置
+        $('div').prop('id','a')
+        $('div').prop('a',100)
+        console.log($('div'))
+        // 获取
+        console.log($('div').prop('id'))
+        console.log($('div').prop('hello'))
+        console.log($('div').prop('a'))
+        // 删除
+        $('div').removeProp('id')
+        // $('div').removeProp('a')
+        // console.log($('div').prop('a'))
+    </script>
+</body>
+</html>

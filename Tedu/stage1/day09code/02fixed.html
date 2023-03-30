@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.mask{
+				background-color: rgba(0, 0, 0, .5);
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+			.login{
+				width: 400px;
+				height: 250px;
+				background-color: white;
+				padding: 20px;
+				/* position: fixed;
+				top: calc(50% - 125px);
+				left: calc(50% - 200px); */
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			.login input{
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				height: 30px;
+				padding: 0 10px;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="text">
+			假装背后有一大段文字
+			<!-- 遮罩层 -->
+			<div class="mask">
+				<div class="login">
+					<h3>登录框</h3>
+					<hr>
+					<input type="text" placeholder="请输入用户名">
+					<input type="text" placeholder="请输入密码">
+					<input type="button" value="点我登录">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>项目在主轴 交叉轴上的对齐方式</title>
+		<style>
+			.box1 {
+				background-color: #ff0;
+				display: flex;
+				justify-content: flex-start; /*默认值 起点对齐*/
+				justify-content: flex-end; /* 终点对齐 */
+				justify-content: center; /* 居中对齐 */
+				justify-content: space-between;/* 两端对齐 */
+				justify-content: space-around; /* 环绕对齐 */
+				justify-content: space-evenly;/* 公平对齐 */
+			}
+			.box3 {
+				background-color: lightgreen;
+				display: flex;
+				/* 将主轴方向改为正向列模式 竖着的 */
+				flex-direction: column;
+				height: 600px;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.item {
+				width: 100px;
+				height: 100px;
+				border: 2px solid #f00;
+				font-size: 30px;
+			}
+			.box2 {
+				/* 项目想要在交叉轴方向移动，交叉轴方向上必须有剩余空间! */
+				height: 600px;
+				background-color: #0ff;
+				display: flex;
+				/* 单行项目在交叉轴上的对齐方式 */
+				align-items: flex-start; /* 起点对齐 */
+				align-items: flex-end;/* 终点对齐 */
+				align-items: center; /* 居中对齐 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+		</div>
+		<div class="box2">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+		</div>
+		<div class="box3">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+		</div>
+	</body>
+</html>

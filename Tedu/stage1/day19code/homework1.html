@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		单价<input type="text" id="price"><br>
+		数量<input type="text" id="num"><br>
+		<button id="btn">支付</button>
+		<script>
+			btn.onclick = function(){
+				var total = price.value * num.value
+				// console.log(total)
+				if(total>=1000){
+					total *= 0.9
+				}
+				// 声明变量 保存会员卡中的余额
+				var card = 1500
+				var rest = card - total
+				
+				if (rest >= 0) {
+					alert('支付成功，余额剩余'+rest+'元')
+				} else{
+					alert('余额不足，会员卡余额还剩1500，请充值')
+				}
+			}
+		</script>
+	</body>
+</html>

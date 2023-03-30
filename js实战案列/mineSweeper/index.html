@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jquery/jquery.js">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <button>难度选择</button>
+            <div class="menu">
+                <button type="">开始</button>
+                <button type="">暂停</button>
+                <button type="">结束</button>
+            </div>
+            <div class="time">计时器：</div>
+        </nav>
+        <table id="field">
+
+        </table>
+        <div id="level">
+            <p>雷场大小<input type="text" value="10" id="mine-f" placeholder="请输入扫雷的场地大小"></p>
+            <p>地雷数量<input type="text" value="10" id="mine-n"></p>
+            <button id="submint" onclick="get_input_value()">开始游戏</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全局变量与局部变量</title>
+	</head>
+	<body>
+		<script>
+			var n1 = 2
+			function fn(){
+				n1 =4
+				var n2 =6
+				n3 = 6
+			}
+			fn()
+			console.log(n1)
+			// console.log(n2)
+			console.log(n3)
+			
+			function fun () {
+				m3 = 5
+				m2 = m3
+				var m1 = m2
+			}
+			fun()
+			console.log(m3)
+			console.log(m2)
+			console.log(m1)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>徽章badge</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" href="../css/bootstrap-icons.css"/>
+		<script src="../js/bootstrap.bundle.js"></script>
+	</head>
+	<body>
+		<!-- 定宽容器 上内间距 -->
+		<div class="container pt-5">
+			<!-- 按钮基类 背景色蓝色 相对定位 -->
+			<button class="btn btn-primary position-relative">
+				收件箱
+				<!-- 徽章基类 红色背景 胶囊形状 
+				在收件箱的右上角-->
+				<span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">16</span>
+			</button>
+			<br>
+			<!-- bi是booticon的简称 envelope是图标的名字-->
+			<!-- 图标可以使用文字属性修改，比如颜色和大小 -->
+			<span class="bi-envelope text-danger" style="font-size: 40px;"></span>
+			<span class="bi-alipay text-primary" style="font-size: 30px;"></span>
+		</div>
+	</body>
+</html>

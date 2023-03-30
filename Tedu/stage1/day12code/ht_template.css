@@ -1,0 +1,329 @@
+/*****所有汉唐二级页面模板的样式*****/
+/*****公共样式******/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.center {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/************** 1楼 header的CSS *************/
+.header {
+	height: 100px;
+	/* 辅助的背景色，用完删除 */
+	/* background-color: lightblue; */
+}
+
+.header .logo {
+	float: left;
+	margin-top: 28px;
+}
+
+.header .other {
+	float: right;
+	margin-top: 36px;
+}
+
+.header .other img {
+	float: left;
+	height: 28px;
+}
+
+.header .other>a {
+	float: left;
+	line-height: 28px;
+	color: #666;
+	font-size: 14px;
+}
+
+.header .other .search {
+	float: right;
+	margin-left: 20px;
+	position: relative;
+	width: 180px;
+}
+
+.header .search input {
+	/* 边框盒子一定要设置width */
+	width: 152px;
+	/* 切换成边框盒子的计算方案，这样加内间距不会影响总宽 */
+	box-sizing: border-box;
+	height: 28px;
+	padding-left: 10px;
+	padding-right: 40px;
+	border: 1px solid #666;
+	/* 去除外轮廓线 */
+	outline: none;
+}
+
+.header .search img {
+	width: 28px;
+	height: 28px;
+	/* 将放大镜图片定位到搜索区域的最右侧
+	 子绝父相，父级要设置非静态定位作为孩子移动的参照物*/
+	position: absolute;
+	/* right: 0; */
+}
+
+/************** 2楼 nav的CSS *************/
+/* 整个导航条 */
+nav {
+	background-color: #F5F2EB;
+	/* 给父元素一个高度还能解决失高问题 */
+	height: 40px;
+}
+
+/* 导航栏中的每一个导航项 包含a和ul */
+nav .nav-item {
+	width: 90px;
+	height: 40px;
+	/* 浮动让所有导航项横置 */
+	float: left;
+}
+
+/* 每个导航项中的a,比如"首页" */
+nav .nav-item>a {
+	display: block;
+	color: #666;
+	font-size: 14px;
+	/* 让块级元素中的文字水平居中 */
+	text-align: center;
+	/* 行高与单行文本等高，垂直居中 */
+	line-height: 40px;
+}
+
+/* 悬停在a上或激活项 修改样式 */
+.nav-item a:hover,
+.nav-item>.active {
+	color: #fff;
+	background-image: linear-gradient(#D4011A, #970009);
+}
+
+/* 导航项中的下拉菜单 */
+.nav-item ul {
+	background-color: rgba(0, 0, 0, .4);
+	color: #fff;
+	font-size: 14px;
+	/* 此时绝对定位的参照物找到了html */
+	position: absolute;
+	/* 顶部条+导航条的高度 */
+	top: 140px;
+	/* 要先消失，悬停时才出现 */
+	display: none;
+}
+
+/* 下拉菜单中的每一个菜单项 */
+.nav-item ul li {
+	width: 90px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+}
+
+/* 悬停的li背景色加深 */
+.nav-item ul li:hover {
+	background-color: rgba(0, 0, 0, .6);
+}
+
+/* 当悬停在整个导航项时，让此项对应的ul出现 */
+.nav-item:hover ul {
+	display: block;
+}
+
+/* 当悬停在下拉菜单时，紧挨着它的a是激活样式 */
+.nav-item ul:hover+a {
+	color: #fff;
+	background-image: linear-gradient(#D4011A, #970009);
+}
+
+/************** 3楼 banner的CSS *************/
+.banner {
+	background-image: url(img/banner-bg.png);
+	height: 140px;
+}
+
+.banner img {
+	height: 140px;
+}
+
+/************** 4楼 main的CSS *************/
+/************** 4楼 main 左侧侧边栏的CSS *************/
+.main .left {
+	width: 270px;
+	float: left;
+	/* 尝试向上窜 */
+	margin-top: -20px;
+	/* 如果想让当前元素在同一层中级别更高，可以加相对定位 */
+	position: relative;
+}
+
+.main .left .js {
+	border: 1px solid #ddd;
+	/* 为了防止加内间距或边框后掉块，切换盒子模型计算方案 */
+	box-sizing: border-box;
+}
+
+.main .left .js div {
+	height: 100px;
+	background-color: #D4011A;
+	/* 加这句话是为了防止父子贴边 h4的上外间距会出去 
+	给父级形成BFC结界 子元素的margin就不会超出父元素的范围 */
+	overflow: hidden;
+}
+
+.main .left .js div h4 {
+	color: #fff;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main .left .js div h2 {
+	font-size: 45px;
+	color: #FF1228;
+	margin-left: 10px;
+}
+
+.main .left .js ul {
+	margin-bottom: 80px;
+}
+
+.main .left .js ul li {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ddd;
+	font-size: 14px;
+	/* 马上给小三角所在的li设置相对定位作为定位参照物 子绝父相 */
+	position: relative;
+}
+
+/* 列表项左侧生成的伪元素 · */
+.main .left .js ul li::before {
+	content: '·';
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+/* 列表项右侧的小三角 */
+.main .left .js ul li span {
+	display: block;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-left-color: #999;
+	/* 用绝对定位将小三角定位到li的右侧，记得设置父级参照物 */
+	position: absolute;
+	top: 14px;
+	right: 10px;
+}
+
+.main .left .js ul li:hover {
+	cursor: pointer;
+	color: #D11A19;
+	background-color: #f4f4f4;
+}
+
+/* 悬停在li上时，小三角的颜色也要变 */
+.main .left .js ul li:hover span {
+	border-left-color: #666;
+}
+
+/* 集团成员的样式 cy */
+.main .left .cy {
+	border: 1px solid #ddd;
+}
+
+.main .left .cy .tit {
+	height: 70px;
+	line-height: 70px;
+	background-color: #AC996D;
+	color: #FFF;
+}
+
+.main .left .cy .tit h4 {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.main .left .cy .tit h4 span {
+	font-size: 14px;
+}
+
+.main .left .cy .box ul {
+	margin: 15px 34px 100px 18px;
+}
+
+.main .left .cy .box ul li {
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-bottom: 1px dashed #ddd;
+}
+
+.main .left .cy .box ul li::before {
+	content: '> ';
+}
+
+/************** 4楼 main 右侧主体的CSS *************/
+.main .right {
+	width: 700px;
+	float: left;
+	margin-left: 30px;
+}
+
+/* 面包屑导航的CSS */
+.main .right .breadcrumb {
+	border-bottom: 4px solid #ddd;
+	color: #989898;
+	font-size: 14px;
+	padding-bottom: 8px;
+	margin-top: 26px;
+}
+
+.main .right .breadcrumb img{
+	width: 12px;
+	height: 14px;
+	padding-right: 5px;
+}
+
+.main .right .breadcrumb a {
+	color: #989898;
+}
+
+.main .right .breadcrumb a+a::before{
+	content: ">";
+}
+/* 主体右侧的内容区域 */
+
+
+/************** 5楼 foot的CSS *************/
+.foot{
+	box-sizing: border-box;
+	height: 80px;
+	background-color: #83764f;
+	margin-top: 100px;
+	padding-top: 20px;
+}
+.foot p{
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}

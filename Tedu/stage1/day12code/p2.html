@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@keyframes movehand {
+				/* 注意：不要只有0%与100%，这样全部时间都给了前半程，后半程下移完毕一瞬间就回去了，太迅速 */
+				0%{
+					transform: translateY(0);
+				}
+				50%{
+					transform: translateY(10px);
+				}
+				100%{
+					transform: translateY(0);
+				}
+			}
+			img{
+				animation: movehand 1s linear infinite ;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/shou.jpg" alt="">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>switch分支结构</title>
+	</head>
+	<body>
+		<input type="text" name="" id="box" placeholder="请输入城市">
+		<button id="btn">查看</button>
+		<p id="txt"></p>
+		<script>
+			var n = 1
+			switch (n){
+				case 1:
+					console.log(1)
+					break;
+				case 2:
+					console.log(2)
+					break;
+				case 3:
+					console.log(3)
+					break;
+				case 4:
+					console.log(4)
+					break;
+				default:
+					console.log(666)
+					break;
+			}
+			btn.onclick = function(){
+				var city = box.value
+				console.log(city)
+				switch(city){
+					case '北京':
+					txt.innerHTML = '烤鸭'
+					break
+					case '成都':
+					txt.innerHTML = '火锅'
+					break
+					case '武汉':
+					txt.innerHTML = '热干面'
+					break
+					case '东北':
+					txt.innerHTML = '大乱炖'
+					break
+					default:
+					console.log('兰州拉面')
+				}
+			}
+			
+		</script>
+	</body>
+</html>

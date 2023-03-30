@@ -1,0 +1,318 @@
+/* 公共样式 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.center {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* ***************一楼header的CSS************ */
+.header {
+	height: 100px;
+	/* 辅助的背景色，用完删除 */
+	/* background-color: lightblue; */
+}
+
+.header .logo {
+	float: left;
+	margin-top: 28px;
+}
+
+.header .other {
+	float: right;
+	margin-top: 36px;
+}
+
+.header .other img {
+	float: left;
+	height: 28px;
+}
+
+.header .other>a {
+	float: left;
+	line-height: 28px;
+	color: #666;
+	font-size: 14px;
+}
+
+.header .other .search {
+	float: right;
+	margin-left: 20px;
+	position: relative;
+}
+
+.header .search input {
+	/* 边框盒子一定要设置width */
+	width: 180px;
+	/* 切换成边框盒子的计算方案，这样加内间距不会影响总宽 */
+	box-sizing: border-box;
+	height: 28px;
+	padding-left: 10px;
+	padding-right: 40px;
+	border: 1px solid #666;
+	/* 去除外轮廓线 */
+	outline: none;
+}
+
+.header .search img {
+	width: 28px;
+	height: 28px;
+	/* 将放大镜图片定位到搜索区域的最右侧
+	 子绝父相，父级要设置非静态定位作为孩子移动的参照物*/
+	position: absolute;
+	right: 0;
+}
+
+/* ***************二楼nav的CSS************ */
+nav {
+	background-color: #f5f2eb;
+	height: 40px;
+}
+
+.nav-item {
+	width: 90px;
+	height: 40px;
+	float: left;
+	background-image: ;
+}
+
+.nav-item>a {
+	display: block;
+	color: #666;
+	font-size: 14px;
+	text-align: center;
+	line-height: 40px;
+}
+
+/* 悬停或者是激活项 修改样式 */
+.nav-item a:hover,
+.nav-item>.active {
+	background-image: linear-gradient(#d4011a, #970009);
+	color: #fff;
+}
+
+.nav-item ul {
+	background-color: rgba(0, 0, 0, .4);
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	top: 140px;
+	display: none;
+}
+
+/* 下拉菜单中的每一个下拉项 */
+.nav-item ul li {
+	width: 90px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+}
+
+.nav-item ul li:hover {
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.nav-item:hover ul {
+	display: block;
+}
+
+.nav-item ul:hover+a {
+	background-image: linear-gradient(#d4011a, #970009);
+	color: #fff;
+}
+
+/* ***************三楼banner的CSS************ */
+.banner {
+	background-image: url(./img/banner-bg.png);
+	height: 140px;
+}
+
+.banner>img {
+	height: 140px;
+}
+
+/* ***************四楼main的CSS************ */
+
+/* ***************四楼main的侧边栏的CSS************ */
+.main .left {
+	width: 270px;
+	float: left;
+	position: relative;
+	margin-top: -20px;
+}
+
+.main .left .js {
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+}
+
+.main .left .js div {
+	height: 100px;
+	background-color: #d4011a;
+	overflow: hidden;
+}
+
+.main .left .js div h4 {
+	color: #fff;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main .left .js div h2 {
+	color: #ff1228;
+	font-size: 45px;
+	margin-left: 10px;
+}
+
+.main .left .js ul {
+	margin-bottom: 80px;
+}
+
+.main .left .js ul li {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ddd;
+	font-size: 14px;
+	position:relative;
+}
+
+.main .left .js ul li:hover{
+	cursor: pointer;
+	color: #d11a19;
+	background-color: #f4f4f4;
+}
+
+.main .left .js ul li::before {
+	content: '·';
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+.main .left .js ul span {
+	display: block;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-left-color: #999;
+	position: absolute;
+	top: 14px;
+	right: 10px;
+}
+
+.main .left .js ul li:hover span{
+	border-left-color: #999;
+}
+
+.main .left .cy{
+	border: 1px solid #ddd;
+}
+
+.main .left .cy .tit{
+	height: 70px;
+	line-height: 70px;
+	background-color: #ac996d;
+	color: #fff;
+}
+
+.main .left .cy .tit h4{
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.main .left .cy .tit h4 span{
+	font-size: 14px;
+}
+
+.main .left .cy .box ul{
+	margin: 15px 34px 100px 18px;
+}
+
+.main .left .cy .box ul li{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-bottom: 1px dashed #ddd;
+}
+
+.main .left .cy .box ul li::before{
+	content: '> ';
+}
+/* ***************四楼main右侧主体的CSS************ */
+.main .right {
+	width: 700px;
+	margin-left: 30px;
+	float: left;
+	/* 辅助色和高，先占位置 */
+}
+
+/* 面包屑css */
+.main .right .breadcumb{
+	margin-top: 26px;
+	padding-bottom: 8px;
+	color: #989898;
+	font-size: 14px;
+	border-bottom: 4px solid #ddd;
+}
+.main .right .breadcumb img{
+	width: 12px;
+	height: 14px;
+	margin-right:5px;
+}
+
+.main .right .breadcumb a+a::before{
+	content: '>';
+}
+
+
+.main .right .main-content{
+	/* background: lightblue; */
+	width: 700px;
+	margin-top: 40px;
+	margin-bottom: 100px;
+	color: #666;
+}
+
+.main .right .main-content h4{
+	color: #333;
+	font-size: 20px;
+}
+
+.main .right .main-content .text{
+	display: block;
+	margin: 5px 0;
+}
+
+.main .right .main-content p{
+	text-indent: 2em;
+	margin: 15px 0;
+}
+/* footer css */
+footer {
+	height: 80px;
+	background-color: #83764f;
+	font-size: 12px;
+	color: #fff;
+	padding-top:20px ;
+}
+footer .center p{
+	text-align: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery/jquery.js"></script>
+    <style>
+       *{
+        margin: 0px;
+        padding: 0px;
+       } 
+       div{
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+       }
+    </style>
+</head>
+<body>
+    <button>slideDown</button>
+    <button>slideUp</button>
+    <button>slideToggle</button>
+
+    <div></div>
+
+    <script>
+        /*
+        折叠动画
+            1.slideDown() 显示
+            2.slideUP（） 隐藏
+            3slideToggle（）切换
+                => 原本是隐藏的变成显示，显示的变成隐藏
+            +对于上述三个函数，有共同的参数
+                => 第一个表示运动时间
+                => 第二个表示运动曲线
+                => 第三个表示运动结束的回调函数
+        */ 
+        $('button:nth-child(1)').click(function(){
+            // 执行slideDown()动画
+            $('div').slideDown(1000,'linear',function(){console.log('slideDown 结束')})
+        })
+        $('button:nth-child(2)').click(function(){
+            // 执行slideUP（）动画
+            $('div').slideUp(1000,'linear',function(){console.log('slideUp 结束')})
+
+        })
+        $('button:nth-child(3)').click(function(){
+            // 执行slideToggle动画
+            $('div').slideToggle(1000,'linear',function(){console.log('slideTogger 结束')})
+        })
+    </script>
+</body>
+</html>

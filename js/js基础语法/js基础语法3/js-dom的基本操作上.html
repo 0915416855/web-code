@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div>一号</div>
+    <div class="box">二号</div>
+    <div class="box content">三号</div>
+    <div class="box" id="container">四号</div> -->
+    <button>
+        操作内容
+    </button>
+
+    <div>
+        <p>文本内容</p>
+    </div>
+    <!-- 
+        获取元素的方式
+        1，根据 id 名称获取
+            document.getElementById
+        2，根据元素 类名 获取
+            document.getElementsByClassName   返回值是伪数组
+        3，根据元素 标签名 获取
+            document.getElementsByTagName  返回值是伪数组  
+        4，更具 选择器 获取一个
+            document.querySelector  获取选择器的第一个
+        5，根据 选择器 获取一组
+            document.querySelectorAll  返回值是伪数组 
+     -->
+     <!-- 
+        操作元素内容
+            1，操作元素 文本 内容
+                获取:元素.innerText
+                设置：元素.innerText='新内容'
+            2，操作元素 超文本 内容
+                获取:元素.innerHTML
+                设置：元素.innerHTML='新内容'
+      -->
+      <!-- 
+        操作元素的属性
+            1，原生属性
+                获取：元素.属性名
+                设置：元素.属性名 = '属性值'
+            2，自定义属性
+                获取：元素.getAttribute('属性名')
+                设置：元素.setAttribute('属性名','属性值')
+                删除：元素.removeAttribute('属性名')
+       -->
+     <script>
+        // var ele = document.getElementById('abc')
+        // var ele = document.getElementsByClassName('box')
+        // var ele = document.getElementsByTagName('a')
+        var ele = document.querySelector('div')
+        var btn = document.querySelector('button')
+        console.log(ele.innerHTML)
+        btn.onclick = function () {
+           ele.innerHTML = '新内容' 
+        }
+     </script>
+</body>
+</html>

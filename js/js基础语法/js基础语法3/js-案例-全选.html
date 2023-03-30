@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            width: 100px;
+            padding: 20px;
+            border: 1px solid pink;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        全选: <input type="checkbox"> <br>
+        <hr>
+        <input type="checkbox"> 选项一<br>
+        <input type="checkbox"> 选项二<br>
+        <input type="checkbox"> 选项三<br>
+        <input type="checkbox"> 选项四<br>
+    </div>
+    <script>
+        //获取元素
+        var allbtn = document.querySelector('input')
+        var items = document.querySelectorAll('input:nth-child(n+2)')
+        //给全选按钮绑定点击属性
+        allbtn.onclick = function () {
+            //拿到自己的选中状态
+            var type = allbtn.checked
+            //将自己的选中状态设置给每个项目
+            for (var i = 0; i < items.length; i++) {
+                items[i].checked = type
+            }
+        }
+        //3.循环给每一个项目绑定点击事件
+        for (var i = 0; i < items.length; i++) {
+            //给每一个选项按钮绑定点击事件
+            items[i].onclick = function () {
+                var flag = false
+                //首先假设变量，假设所有按钮都选中的
+                var flag = true
+                //通过循环遍历验证假设
+                for (var j = 0; j < items.length; j++) {
+                    if (items[j].checked === false) {
+                        flag = false
+                        break
+                    }
+                }
+                //最后将项目的checked值赋给全选按钮
+                allbtn.checked = flag
+            }
+
+        } 
+    </script>
+</body>
+
+</html>

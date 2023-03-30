@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>vw vh 与响应式的配合</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+			}
+			div{
+				background-color: blue;
+				margin-top: 2vw;
+			}
+			@media (max-width:767px) {
+				div{
+					width: 45vw;
+					height: 45vw;
+				}
+			}
+			@media (min-width:980px) {
+				div{
+					width: 20vw;
+					height: 20vw;
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+	</body>
+</html>

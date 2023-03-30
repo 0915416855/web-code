@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导航栏navbar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/bootstrap-icons.css" />
+		<script src="../js/bootstrap.bundle.js"></script>
+	</head>
+	<body>
+		<!-- 1.最外层功能块 导航条 -->
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<!-- 2.版心 -->
+			<div class="container-fluid">
+				<!-- 3.navbar-brand logo区域 既有图片也有文字 -->
+				<a class="navbar-brand" href="#">
+					<img src="../img/favicon.ico" alt="LOGO图片">
+					汉唐商城客户端
+				</a>
+				<!-- 4. 小菜单的按钮 上面有JS属性负责交互效果-->
+				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<!-- 小菜单按钮上的三条横线 -->
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- 5.大菜单 -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<!-- 大菜单中的列表，每个li都是一个导航项 -->
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">首页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">数据管理</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">内容管理</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled">用户管理</a>
+						</li>
+						<li class="nav-item position-relative">
+							<a href="#" class="bi-envelope nav-link pe-4"></a>
+							<span class="badge bg-danger position-absolute top-0 end-0 rounded-pill">16</span>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown ms-1">
+								<button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+									选择列表
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">第一项</a></li>
+									<li><a class="dropdown-item" href="#">第二项</a></li>
+									<li><a class="dropdown-item" href="#">第三项</a></li>
+									<li><a class="dropdown-item" href="#">第四项</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<!-- a标签作为被点击的对象 -->
+							<!--href="javascript:;"空链接，不发生任何跳转-->
+							<a href="javascript:;" class="nav-link" data-bs-toggle="modal"
+								data-bs-target="#exampleModal">点击弹出</a>
+							<!-- Modal模态框 点击超链接会弹出的部分 -->
+							<div class="modal fade" id="exampleModal" tabindex="-1">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h1 class="modal-title fs-5">是否退出?</h1>
+											<button class="btn-close" data-bs-dismiss="modal"></button>
+										</div>
+										<div class="modal-body">
+											<p>点击之后将直接关闭页面，是否继续?</p>
+											再有内容还放在这里...
+										</div>
+										<div class="modal-footer">
+											<button class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</body>
+</html>

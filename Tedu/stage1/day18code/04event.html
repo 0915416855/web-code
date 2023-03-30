@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>其他事件</title>
+	</head>
+	<body>
+		<input type="text" id="uname">
+		<script>
+			// 为输入框设置获得焦点事件
+			uname.onfocus = function(){
+				console.log('获得光标')
+			}
+			// 为输入框设置失去焦点事件
+			uname.onblur = function(){
+				console.log('失去光标')
+			}
+		</script>
+	</body>
+</html>

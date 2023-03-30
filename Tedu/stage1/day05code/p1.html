@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>属性选择器</title>
+        <style>
+                [readonly]{
+                        border: 3px solid red;
+                }
+                [name='uname']{
+                        background-color: green;
+                }
+                input[name='upwd']{
+                        background-color: yellow;
+                }
+        </style>
+    </head>
+    <body>
+        <input type="text">    <hr>
+        <input type="text" value="只读" readonly>  <hr>  
+        <input type="text" name="uname"> <hr>
+        <input type="password" name="upwd"> <hr>
+    </body>
+</html>

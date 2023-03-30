@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>盒子模型尺寸计算方案</title>
+        <style>
+            .pic1{
+                width: 300px;
+                padding: 30px;
+                border: 20px solid red;
+                
+            }
+            /* 怪异盒模型 */
+            .pic2{
+                box-sizing: border-box;
+                width: 300px;
+                padding: 30px;
+                border: 20px solid red;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="img/2.jpg" alt="" class="pic1"><br>
+        <img src="img/2.jpg" alt="" class="pic2">
+    </body>
+</html>

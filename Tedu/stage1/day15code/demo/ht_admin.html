@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BOOT组件练习-汉唐后台</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/bootstrap-icons.css" />
+		<script src="../js/bootstrap.bundle.js"></script>
+	</head>
+	<body>
+		<!-- 1.头部导航栏 -->
+		<div class="mb-2">
+			<!-- 1.最外层功能块 导航条 -->
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+				<!-- 2.版心 -->
+				<div class="container-fluid">
+					<!-- 3.navbar-brand logo区域 既有图片也有文字 -->
+					<a class="navbar-brand" href="#">
+						<img src="../img/favicon.ico" alt="LOGO图片">
+						汉唐商城客户端
+					</a>
+					<!-- 4. 小菜单的按钮 上面有JS属性负责交互效果-->
+					<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+						<!-- 小菜单按钮上的三条横线 -->
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- 5.大菜单 -->
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<!-- 大菜单中的列表，每个li都是一个导航项 -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">首页</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">数据管理</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">内容管理</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled">用户管理</a>
+							</li>
+							<li class="nav-item position-relative">
+								<a href="#" class="bi-envelope nav-link pe-4"></a>
+								<span class="badge bg-danger position-absolute top-0 end-0 rounded-pill">16</span>
+							</li>
+							<li class="nav-item">
+								<div class="dropdown ms-1">
+									<button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+										选择列表
+									</button>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">第一项</a></li>
+										<li><a class="dropdown-item" href="#">第二项</a></li>
+										<li><a class="dropdown-item" href="#">第三项</a></li>
+										<li><a class="dropdown-item" href="#">第四项</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<!-- a标签作为被点击的对象 -->
+								<!--href="javascript:;"空链接，不发生任何跳转-->
+								<a href="javascript:;" class="nav-link" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">点击弹出</a>
+								<!-- Modal模态框 点击超链接会弹出的部分 -->
+								<div class="modal fade" id="exampleModal" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h1 class="modal-title fs-5">是否退出?</h1>
+												<button class="btn-close" data-bs-dismiss="modal"></button>
+											</div>
+											<div class="modal-body">
+												<p>点击之后将直接关闭页面，是否继续?</p>
+												再有内容还放在这里...
+											</div>
+											<div class="modal-footer">
+												<button class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- 2.主体区域 -->
+		<!-- 2.1最外层功能块 -->
+		<div class="ht-admin-main">
+			<!-- 2.2响应式版心 变宽容器 全宽适配 -->
+			<div class="container-fluid">
+				<!-- 3.栅格布局先写行 -->
+				<div class="row">
+					<!-- 3.1左侧侧边栏 md-3 md以下消失 -->
+					<div class="col-md-3 d-none d-md-block">
+						<div class="accordion" id="sfq">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" data-bs-toggle="collapse"
+										data-bs-target="#collapseOne">
+										<span class="bi-alarm text-primary mx-1"></span>
+										数据管理
+									</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#sfq">
+									<div class="accordion-body">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item">商品列表</li>
+											<li class="list-group-item">多条件搜索</li>
+											<li class="list-group-item">添加商品</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" data-bs-toggle="collapse"
+										data-bs-target="#collapseTwo">
+										<span class="bi-book text-primary mx-1"></span>
+										内容管理
+									</button>
+								</h2>
+								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#sfq">
+									<div class="accordion-body">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item">轮播广告</li>
+											<li class="list-group-item">首页推荐</li>
+											<li class="list-group-item">最新上架</li>
+											<li class="list-group-item">热销单品</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" data-bs-toggle="collapse"
+										data-bs-target="#collapseThree">
+										<span class="bi-bell text-primary mx-1"></span>
+										功能页面
+									</button>
+								</h2>
+								<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#sfq">
+									<div class="accordion-body">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item">403页面</li>
+											<li class="list-group-item">404页面</li>
+											<li class="list-group-item">500页面</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 3.2右侧主体 md-9 md以下占满父级row -->
+					<div class="col-md-9 col-12">
+						<!-- 4.再嵌套一层，利用右侧的天沟充当间距 -->
+						<div>
+							<!-- 5.标题 下拉选框 输入组 -->
+							<h2>笔记本商品列表</h2>
+							<!-- 栅格布局的底层是弹性盒，所以栅格布局可以直接使用flex属性
+							 row相当于flex的父容器 col相当于flex父容器下的子项目-->
+							<div class="row my-3 align-items-center">
+								<!-- 左侧选择页数 -->
+								<div class="col-5">
+									<span>每页显示记录数: </span>
+									<select>
+										<option value="1">10</option>
+										<option value="2">20</option>
+										<option value="3">30</option>
+										<option value="4">40</option>
+									</select>
+								</div>
+								<!-- 右侧输入组 -->
+								<div class="col-7">
+									<div class="input-group">
+									  <input type="text" class="form-control">
+									  <span class="input-group-text bg-primary text-white">搜索</span>
+									</div>
+								</div>
+							</div>
+							<!-- 6.表格区域 -->
+							<table class="table table-hover table-striped text-center">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>品牌</th>
+										<th>商品名</th>
+										<th>价格</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>戴尔</td>
+										<td>MS116 鼠标有线</td>
+										<td>￥ 19.90</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">删除</button>
+												<button class="btn btn-outline-success btn-sm">编辑</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>华为</td>
+										<td>笔记本电脑</td>
+										<td>￥ 3899.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>雷柏</td>
+										<td>V500PRO 机械键盘</td>
+										<td>￥ 109.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>先马</td>
+										<td>平头哥M1电竞版</td>
+										<td>￥ 179.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>英特尔</td>
+										<td>10400F/10600KF</td>
+										<td>￥ 1299.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>金士顿</td>
+										<td>32GB USB3.2 Gen</td>
+										<td>￥ 27.9</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>罗技</td>
+										<td>C270高清网络摄像头</td>
+										<td>￥ 119.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>微软</td>
+										<td>Xbox Elite 无线控制器2代</td>
+										<td>￥ 1398.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>佳能</td>
+										<td>MG3080无线家用彩色喷墨多功能一体机</td>
+										<td>￥ 459.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>尼康</td>
+										<td>D3500数码单反相机</td>
+										<td>￥ 4899.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>康佳</td>
+										<td> 21.5英寸 电脑显示器</td>
+										<td>￥ 479.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>高漫</td>
+										<td>数位板可连接手机手绘板电脑绘画板手写板写字板电子绘图板</td>
+										<td>￥ 138.00</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-outline-danger btn-sm">编辑</button>
+												<button class="btn btn-outline-success btn-sm">删除</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

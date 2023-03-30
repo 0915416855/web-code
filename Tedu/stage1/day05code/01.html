@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 1，多个选择器，渲染同一个元素，样式不同，会同时生效叠加效果*/
+			/* 2，渲染同一个元素时，如果设置的属性名相同值不同，后面的值会覆盖前面的值 */
+			/* 3，子元素继承父元素的颜色 */
+			/* 4，最近的祖先的样式要比之前的祖先样式优先级要高 */
+			/* 5，指定大于继承 */
+			p {
+				color: red;
+			}
+			.text{
+				background-color: yellow;
+			}
+			.text{
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="text">测试文字</p>
+		<p><span>测试文字</span></p>
+		<div style="color: green;">
+			<div style="color: blue;">
+				<div>测试文字</div>
+			</div>
+		</div>
+		<div style="color: pink;"><span style="color:gray;">测试文字4</span></div>
+	</body>
+</html>

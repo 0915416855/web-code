@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 500px;
+				background-color: lightgreen;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam at, accusantium exercitationem nisi, saepe omnis similique tempore reiciendis veritatis magni quod numquam qui, corporis quo sapiente aut pariatur eligendi. Iusto!</p>
+		<button id="btn1">变大</button>
+		<button id="btn2">变小</button>
+		<script>
+			// 定义变量保存字号
+			var a = 20
+			btn1.onclick = function(){
+				a++
+				box.style.fontSize = a+'px'
+			}
+			btn2.onclick = function(){
+				a--
+				box.style.fontSize = a+'px'
+			}
+		</script>
+	</body>
+</html>

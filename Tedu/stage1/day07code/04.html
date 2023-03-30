@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>幽灵空白节点</title>
+		<style>
+			.box{
+				background-color: #00f;
+			}
+			img{
+				/* 块级元素不带幽灵空白节点，把图片变成块级，去除幽灵空白节点 */
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="./img/bg1.jpg" alt="">
+		</div>
+	</body>
+</html>

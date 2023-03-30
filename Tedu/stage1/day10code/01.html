@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结构性伪类选择器</title>
+		<style>
+			/* 选中ol下的第2个li孩子 */
+			ol li:nth-child(2){
+				color: red;
+			}
+			/* 选中ul下的第1个li孩子 */
+			ul li:nth-child(1){
+				color: green;
+			}
+			ul li:first-child {
+				border: 1px solid green;
+			}
+			/* 选中ul下的最后1个li孩子 */
+			ul li:nth-child(5){
+				color: blue;
+			}
+			ul li:last-child {
+				border: 1px solid blue;
+			}
+			/* 选中4的倍数 */
+			ol li:nth-child(4n){
+				color: purple;
+			}
+			/*选中所有偶数项，把背景色改为淡黄色lightyellow */
+			/* ol li:nth-child(2n){ */
+			ol li:nth-child(even){
+				background-color: lightyellow;
+			}
+			/*选中所有奇数项，把背景色改为淡蓝色lightblue */
+			/* ol li:nth-child(2n+1){ */
+			/* ol li:nth-child(2n-1){ */
+			ol li:nth-child(odd){
+				background-color: lightblue;
+			}
+			/* 选中ol中倒数第3个孩子 */
+			ol li:nth-last-child(3){
+				color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>全部订单</li>
+			<li>待收货</li>
+			<li>待发货</li>
+			<li>待评价</li>
+			<li>退换货</li>
+		</ul>
+		<ol>
+			<li>爱的代价</li>
+			<li>月亮代表我的心</li>
+			<li>小城故事</li>
+			<li>爱</li>
+			<li>征服</li>
+			<li>再见</li>
+			<li>蝴蝶飞</li>
+			<li>老鼠爱大米</li>
+			<li>两只蝴蝶</li>
+		</ol>
+	</body>
+</html>

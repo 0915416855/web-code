@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 100px;
+			animation: run 1s infinite linear;
+			animation-play-state: paused;
+			}
+			@keyframes run {
+				0%{
+					transform: rotate(0);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+			.box:hover{
+				animation-play-state: running;
+			}
+			img{
+				border-radius: 50%;
+				animation: run1 3s linear infinite alternate;
+				animation-play-state: running;
+			}
+			@keyframes run1 {
+				0%{
+					transform: translate(0,0) scale(1);
+				}
+				50%{
+					transform: translate(200px,200px) scale(1.5);
+				}
+				100%{
+					transform: translate(400px,0) scale(1);
+				}
+			}
+		</style>
+	</head>
+	<div class="box">
+		新歌
+	</div>
+	<img src="./img/xin.png" alt="">
+	<body>
+	</body>
+</html>

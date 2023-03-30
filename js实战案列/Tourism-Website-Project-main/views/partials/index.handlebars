@@ -1,0 +1,29 @@
+<main>
+    <div class="search-card-center">
+        <h1>Welcome!</h1>
+        <p>云游 发现最好的旅游景点和游记</p>
+        <form id="search-form" name="search-form" method="POST">
+            <input id="search-bar" type="text" name="searchTerm" class = "searchFields" placeholder="Search for tourist attractions"/>
+            <div>
+            <button type="button" class="searchbtn" id="search-attraction-button">Search Attractions</button>
+            <button type="button" class="searchbtn" id="search-travelogue-button">Search Travelogues</button>
+            </div>
+        </form>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
+localStorage.clear('pageDeriveFrom');
+localStorage.clear('attractionIdToAdd');
+</script>
+<script>
+    $('#search-attraction-button').click(function(){
+        $('#search-form').attr('action','/attractions/Search');
+        $('#search-form').submit();
+    })
+    $('#search-travelogue-button').click(function(){
+        $('#search-form').attr('action','/travelogues/Search');
+        $('#search-form').submit();
+    })
+</script>

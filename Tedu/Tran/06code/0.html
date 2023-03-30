@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+			}
+			a{
+				color: white;
+			}
+			.bg{
+				width: 100vw;
+				height: 100vh;
+				background-image: url(./kugouimg/list/bg2.png);
+				color: white;
+			}
+			.title{
+				text-align: center;
+				padding: 7vh;
+				font-size: 2vh;
+			}
+			.navbar{
+				width: 100vw;
+				display: flex;
+				justify-content:space-around;
+				font-size: 2vh;
+			}
+			.list{
+				width: 80vw;
+				margin: 0 auto;
+				/* border: 1px solid pink; */
+			}
+			.list .list-menu{
+				width: 80vw;
+				display: flex;
+				/* justify-content: ; */
+				padding: 4vh 0 4vh;
+				/* margin:  auto; */
+				/* border: 1px solid pink; */
+			}
+			.list .img{
+				width: 10vw;
+			}
+			.list div p{
+				font-size: 2vh;
+				margin: 0 0 0 4vw;
+				
+			}
+			.list .time{
+				width: 1.5vh;
+				font-size: 1vh;
+				margin: auto 0;
+				/* width:vw; */
+				margin-left: auto;
+				/* padding-left:2vw ; */
+			}
+			.btn-moudle{
+				width: 100vw;
+				background-color: rgba(0, 0, 0, .9);
+				display: flex;
+				justify-content: space-around;
+				position: fixed;
+				bottom: 0;
+			}
+			.btn-moudle div{
+				/* width: 10vw; */
+				height: 8vh;
+				/* margin-top: ; */
+				align-items: center;
+			}
+			.btn-moudle img{
+				margin: 1vh auto;
+				width: 6vw;
+			}
+			.btn-moudle p{
+				text-align: center;
+			}
+			.hr1{
+				/* border: none; */
+				height: .3vw;
+				background: linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,0));
+				/* margin:2vh ; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg">
+			<p class="title">最 近</p>
+			<div class="navbar">
+				<a href="#">单曲</a>
+				<a href="#">专辑</a>
+				<a href="#">详情</a>
+				<a href="#">歌词</a>
+				<a href="#">歌词本</a>
+			</div>
+			<div class="hr1"></div>
+			<div class="list">
+				<div class="list-menu">
+					<img src="./kugouimg/list/zanting.png" alt="" class="img">
+					<p>樱花樱花想见你 <br> 满汉全席音乐团队</p>
+					<img src="./kugouimg/list/xinhao-signal-fill.png" alt="" class="time">
+				</div>
+				<div class="hr1"></div>
+				<div class="list-menu">
+					<img src="./kugouimg/list/kaishi2.png" alt="" class="img">
+					<p>aL.IEz <br> mizubi</p>
+					<p class="time">3:41</p>
+				</div>
+				<div class="hr1"></div>
+				<div class="list-menu">
+					<img src="./kugouimg/list/kaishi2.png" alt="" class="img">
+					<p>惊鸿一面 <br> 许嵩、黄玲</p>
+					<p class="time">4:16</p>
+				</div>
+				<div class="hr1"></div>
+				<div class="list-menu">
+					<img src="./kugouimg/list/kaishi2.png" alt="" class="img">
+					<p>大鱼 <br> 周深</p>
+					<p class="time">3:46</p>
+				</div>
+				<div class="hr1"></div>
+				<div class="list-menu">
+					<img src="./kugouimg/list/kaishi2.png" alt="" class="img">
+					<p>焚情 <br> 张信哲</p>
+					<p class="time">4:06</p>
+				</div>
+			</div>
+			<div class="btn-moudle">
+				<div class="">
+					<img src="./kugouimg/list/yinle.png" alt="">
+					<p>音乐</p>
+				</div>
+				<div class="">
+					<img src="./kugouimg/list/erji.png" alt="">
+					<p>音乐馆</p>
+				</div>
+				<div class="">
+					<img src="./kugouimg/list/caidan.png" alt="">
+					<p>音乐分类</p>
+				</div>
+				<div class="">
+					<img src="./kugouimg/list/shexiang.png" alt="">
+					<p>我的MV</p>
+				</div>
+				<div class="">
+					<img src="./kugouimg/list/yonghu.png" alt="">
+					<p>个人中心</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

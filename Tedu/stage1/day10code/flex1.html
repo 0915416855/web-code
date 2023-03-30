@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>主轴方向 换行 主轴方向与换行的简写</title>
+		<style>
+			.box1 {
+				background-color: #ff0;
+			}
+			.box1>div {
+				width: 100px;
+				height: 100px;
+				border: 2px solid #000;
+				font-size: 30px;
+			}
+			.box2 {
+				background-color: #0ff;
+				/* 指定box2作为弹性布局的父容器 */
+				display: flex;
+				/* 更换主轴方向 */
+				flex-direction: row-reverse; /* 反向行模式 */
+				flex-direction: column; /* 正向列模式 */
+				flex-direction: column-reverse; /* 反向列模式 */
+				flex-direction: row; /* 默认值 正向行模式 */
+				
+				/* flex项目的换行 */
+				flex-wrap: nowrap; /* 默认值 不换行 */
+				flex-wrap: wrap; /* 换行,一行显示不了下去下一行显示 */
+				
+				/* 主轴排序与是否换行的简写形式 */
+				/* 反向行模式 换行 4321 765*/
+				flex-flow: row-reverse wrap; 
+				/* 如果是列模式，想要换行需要限制高度，否则不会换行 */
+				height: 300px;
+				flex-flow: column wrap; /*列模式 换行 12 34 56 7 */
+				flex-flow: column-reverse wrap; /*反向列模式 换行 21 43 65 7 */
+				/* 行模式 换行 1234 567*/
+				flex-flow: row wrap;
+			}
+			.box2>div {
+				width: 120px;
+				height: 120px;
+				border: 2px solid #f00;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div>a</div>
+			<div>b</div>
+			<div>c</div>
+		</div>
+		<div class="box2">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+		</div>
+	</body>
+</html>

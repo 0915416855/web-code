@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性选择器</title>
+		<style>
+			/* 选中所有有title属性且值为news的元素 */
+			[title="news"]{
+				color: red;
+			}
+			/* 选中p元素，有title属性且值为news */
+			p[title="news"]{
+				color: red;
+			}
+			/* 选中a元素，有href属性且值以https开头 */
+			a[href^="https"]{
+				color: yellow;
+			}
+			/* 选中img元素，有src属性且值以.gif结尾 */
+			img[src$=".gif"]{
+				border: 5px solid #f00;
+			}
+			/* 选中a元素，有class属性且值里包含内容pic */
+			a[class*="pic"]{
+				color: green;
+			}
+			/* 选中input元素，且包含readonly只读属性 */
+			input[readonly]{
+				border: 2px solid #f0f;
+			}
+		</style>
+	</head>
+	<body>
+		<p title="news">一段新闻...</p>
+		<span title="news">哈哈哈哈</span>
+		<p title="xiaoshuo">有一个灰衣老者...</p>
+		<hr>
+		<a href="https://www.baidu.com/">访问百度</a>
+		<a href="01.html">访问刚刚写过的页面</a>
+		<hr>
+		<img src="img/1.gif">
+		<img src="img/2.jpeg">
+		<hr>
+		<ul>
+			<li><a href="#" class="pic1">1</a></li>
+			<li><a href="#" class="pic2">2</a></li>
+			<li><a href="#" class="pic3">3</a></li>
+			<li><a href="#" class="txt">4</a></li>
+		</ul>
+		<hr>
+		<input type="text">
+		<input type="text" value="就不让你改" readonly>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<!-- 	练习：创建公司对象，包含属性有名称、地址、电话、传真、邮箱，最后渲染到网页显示以下格式
+		
+		### 北京汉唐资产管理集团有限公司
+		
+		- 地址：北京市西城区黄寺大街23号阳光丽景3号楼23-81
+		- 电话：010-85187800
+		- 传真：010-85188700
+		- 邮编：100011 -->
+		<div id="box">
+			
+		</div>
+		<script>
+			var company = {
+				name : '北京汉唐资产管理集团有限公司',
+				address : '北京市西城区黄寺大街23号阳光丽景3号楼23-81',
+				tel:'010-85187800',
+				fax : '010-85188700',
+				postcode : '100011'
+			}
+			var str = `
+				<h3>${company.name}</h3>
+				- 地址：${company.address}<br>
+				- 电话：${company.tel}<br>
+				- 传真：${company.fax}<br>
+				- 邮编：${company.po}<br>
+			`
+			box.innerHTML = str
+		</script>
+	</body>
+</html>

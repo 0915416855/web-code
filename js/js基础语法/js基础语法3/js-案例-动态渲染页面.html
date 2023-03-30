@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 300px;
+            text-align: center;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- js进行渲染 -->
+        </tbody>
+    </table>
+
+    <script>
+        //提前准备好的数据
+        var users = [
+            { id: 1, name: 'name1', age: 22 },
+            { id: 2, name: 'name2', age: 23 },
+            { id: 3, name: 'name3', age: 24 }
+        ]
+
+        //0,获取tbody标签
+        var tbody = document.querySelector('tbody')
+        //1,循环遍历数组中的数据
+        users.forEach(function (item) {
+            console.log(item)
+            //2,每循环依次生成一个tr标签、
+            var tr = document.createElement('tr')
+            //3,循环遍历item
+            for (var key in item) {
+                //4,生成td标签
+                var td = document.createElement('td')
+                td.innerHTML = item[key]
+                //5,把td插入到tr的标签内
+                tr.appendChild(td)
+            }
+            console.log(tr)
+            // //把本次tr插入到tbody内
+            tbody.appendChild(tr)
+            // console.log(tbody)
+        })
+
+    </script>
+</body>
+
+</html>

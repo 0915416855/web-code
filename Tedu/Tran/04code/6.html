@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.bg{
+				width: 100vw;
+				height: 100vh;
+				background-image: url(./kugouimg/login/bg1.png);
+				background-size: cover;
+				overflow: hidden;
+			}
+			.center {
+				width: 70vw;
+				/* height: 20vh; */
+				/* background-color: #ff00ff; */
+				margin: 15vh auto;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.logo {
+				/* display: inline; */
+				width: 20vw;
+			}
+			
+			.text {
+				width: 48vw;
+				/* padding-left: 6vw; */
+				margin: auto 0;
+			}
+			
+			.h1 {
+				color: #fff;
+				font-size: 9vw;
+				margin-bottom: 2vw;
+			}
+			
+			p {
+				font-size: 5vw;
+				color: #fff;
+			}
+			.btn-part{
+				width: 70vw;
+				margin: 25vh auto 0 auto;
+				/* display: flex; */
+				/* background-color:yellow; */
+			}
+			.btn{
+				width: 70vw;
+				height: 5vh;
+		    border-radius: 2.5vh;
+				border: none;
+				color: #fff;
+				font-size: 3vh;
+			}
+			.login{
+				background-color: #0c97e6;
+			}
+			.reg{
+				background-color: #0ce6c4;
+				margin-top: 1vh;
+			}
+			.alert{
+				margin-top: 4vh;
+				text-align: center;
+				font-size: 2vh;
+			}
+			.other-login{
+				width: 70vw;
+				height: 10vh;
+				margin: 6vh auto 0 auto;
+				/* background-color: yellow; */
+				display: flex;
+			}
+			.other-login img{
+				width: 6vh;
+				margin: 0 auto;
+			}
+			.other-login div{
+				width: 23vw;
+				padding: 0 3vh;
+			}
+			.other-login p{
+				font-size: 2vh;
+				text-align: center;
+			}
+		</style>
+	<body>
+		<div class="bg">
+			<div class="center">
+				<img src="./kugouimg/login/logo.png" alt="" class="logo">
+				<div class="text">
+					<p class="h1">酷 狗 音 乐</p>
+					<p>音 乐 总 有 新 玩 法</p>
+				</div>
+			</div>
+			<div class="btn-part">
+				<button class="btn login">登 录</button>
+				<button class="btn reg">注 册</button>
+			</div>
+			<p class="alert">其 他 登 录 方 式</p>
+			<div class="other-login">
+				<div class="blog">
+					<img src="./kugouimg/login/sina.png" alt="">
+					<p>微博</p>
+				</div>
+				<div class="qq">
+					<img src="./kugouimg/login/qq.png" alt="">
+					<p>QQ</p>
+				</div>
+				<div class="wechat">
+					<img src="./kugouimg/login/weixin.png" alt="">
+					<p>微信</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

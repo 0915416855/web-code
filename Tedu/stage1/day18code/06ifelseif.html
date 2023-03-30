@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>if-else-if分支嵌套</title>
+	</head>
+	<body>
+		<script>
+			var score = 4
+			if (90 <= score && score <= 100) {
+				console.log('优秀')
+			} else if (80 <= score && score < 90) {
+				console.log('良好')
+			} else if (70 <= score && score < 80) {
+				console.log('中等')
+			} else if (60 <= score && score < 70) {
+				console.log('及格')
+			} else {
+				console.log('不及格')
+			}
+			
+			var price = 3000
+			if(price>=1000 && price<2000){
+				console.log('原价：'+price)
+				price *= 0.9
+				console.log('实际应支付：'+price)
+			}else if(price>=2000 && price<5000){
+				console.log('原价：'+price)
+				price *= 0.8
+				console.log('实际应支付：'+price)
+			}else if(price>=5000){
+				console.log('原价：'+price)
+				price *= 0.7
+				console.log('实际应支付：'+price)
+			}else{
+				console.log('原价：'+price)
+				console.log('实际应支付：'+price)
+			}
+		</script>
+	</body>
+</html>

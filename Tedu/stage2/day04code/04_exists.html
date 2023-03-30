@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>检测属性是否存在</title>
+	</head>
+	<body>
+		<script>
+			var person = {
+				name:'xx',
+				sex:'0'
+			}
+			// 方法一，与undefind比较
+			// console.log(person.age === undefined)
+			// 方法二，使用js提供的函数
+			// console.log(person.hasOwnProperty('name'))
+			// 方法三，
+			// console.log('sex' in person)
+			
+			var com = {
+				cid:1,
+				title:'商品',
+				price:200,
+			}
+			if(com.color === undefined){
+				com.color = 'red'
+			}
+			if ('price' in com) {
+				com.price *= .9 
+			}
+			console.log(com)
+		</script>
+	</body>
+</html>

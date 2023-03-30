@@ -1,0 +1,39 @@
+.newList{
+	margin-top: 30px;
+}
+.newList li{
+	height: 40px;
+	border-bottom: 2px dashed #ddd;
+	display: flex;
+	justify-content: space-between;
+	line-height: 40px;
+	font-size: 14px;
+	color: #666;
+	margin: 0 10px;
+}
+
+.newList li a::before{
+	content: "·";
+	margin-right: 5px;
+}
+
+.newList .mBtn{
+	margin: 50px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+}
+.newList .mBtn div{
+	margin-left: 5px;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	color: #666;
+	line-height: 30px;
+}
+
+.newList .mBtn div:hover,
+.newList .mBtn .active
+{
+	background-color: #86754d;
+	color: white;
+}

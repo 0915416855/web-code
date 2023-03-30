@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表盘指针旋转</title>
+		<style>
+			.clock{
+				width: 200px;
+				height: 200px;
+				border: 5px solid black;
+				border-radius: 50%;
+				margin: 10px auto;
+			}
+			.pointer{
+				width: 5px;
+				height: 100px;
+				background-color: red;
+				margin: 0 auto;
+				/* 切换变换时的基点 */
+				transform-origin: bottom;
+				transition: 3s;
+			}
+			.clock:hover .pointer{
+				transform: rotateZ(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<div class="pointer"></div>
+		</div>
+	</body>
+</html>

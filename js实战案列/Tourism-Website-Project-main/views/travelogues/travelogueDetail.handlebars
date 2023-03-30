@@ -1,0 +1,11 @@
+<div id="travelogueDetailTable">
+<div>
+    <h1>{{Travelogue.travelogue.title}}</h1>
+</div>
+<div>
+    {{{Travelogue.travelogue.content}}}
+</div>
+{{#if isAdmin}}
+    <a href="/delete/travelogues/{{Travelogue._id}}">Delete</a>
+{{/if}}
+</div>

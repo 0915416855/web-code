@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		关键字<input type="text" id="kw">
+		<script>
+			kw.onblur = function(){
+				if(kw.value === ''){
+					alert('关键字不能为空')
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+.box1, .box2, .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: #f00; }
+
+.box2, .box3 {
+  border-radius: 5px; }
+
+.box4, .box3 {
+  font-size: 19px; }

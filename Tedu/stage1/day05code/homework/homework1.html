@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+                input+span{
+                        color: transparent;
+                }
+                form>input:focus{
+                        background-color: yellow;
+                }
+                input:focus+span{
+                        color: red;
+                }
+        </style>
+    </head>
+    <body>
+            <form action="">
+                    用户名<input type="text">
+                    <span class="1">请验证用户名</span>
+            </form>
+    </body>
+</html>

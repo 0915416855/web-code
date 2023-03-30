@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>if-else结构</title>
+	</head>
+	<body>
+		<script>
+			var age = 8
+			if (age >= 18) {
+				console.log('成年人')
+			} else {
+				console.log('未成年人')
+			}
+
+			var num = 2
+			if (num % 2 === 0) {
+				console.log('结果：' + num + '是偶数')
+			} else {
+				console.log('结果：' + num + '不是偶数')
+			}
+
+			var uname = 'root',
+				upwd = '123456'
+			if (uname === 'root' && upwd === '123456') {
+				console.log('登录成功')
+			} else {
+				console.log('登录失败')
+			}
+
+			var gender = 1
+			if (gender === 0) {
+				console.log('女')
+			} else {
+				console.log('男')
+			}
+			console.log(gender === 0 ? '女' : '男')
+		</script>
+	</body>
+</html>

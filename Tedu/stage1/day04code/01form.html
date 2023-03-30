@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单练习</title>
+	</head>
+	<body>
+		<form action="#">
+			<!-- 下拉菜单 -->
+			爱吃的菜
+			<select name="food">
+				<option>四川火锅</option>
+				<option>云南汽锅鸡</option>
+				<option>潮汕砂锅粥</option>
+				<option>上海腌笃鲜</option>
+			</select>
+			<br>
+			热爱的运动
+			<select name="sports" multiple>
+				<option value="1">游泳</option>
+				<option value="2">跑步</option>
+				<option value="3">普拉提</option>
+				<option value="4" selected>敲代码</option>
+			</select>
+			<br>
+			<!-- 多行文本域 -->
+			<textarea maxlength="8" placeholder="请留下您的宝贵意见" rows="10" cols="50" style="resize: none;"></textarea>
+			<br>
+			<!-- label关联控件 -->
+			<input type="checkbox" id="agree" name="agree" value="1">
+			<label for="agree">请同意此协议</label>
+			<input type="submit" value="点击提交">
+			<hr>
+
+			<!-- h5新增控件 -->
+			<label for="age">年龄</label><input type="number" id="age" min="0" max="100" step="2">
+			<label for="color">幸运色</label><input type="color" id="color"><br>
+			日期:<input type="date" name="" id="" value="" />
+			month：<input type="month" name="" id="" value="" />
+			week：<input type="week" name="" id="" value="" />
+			<br>
+			搜索<input type="search" name="" required="" placeholder="Search" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
+			<br>
+			缩放：<input type="range" name="" id="">
+		</form>
+	</body>
+</html>

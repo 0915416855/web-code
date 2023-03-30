@@ -1,0 +1,190 @@
+/* 首页轮播图区域css */
+.curousel {
+	height: 450px;
+	position: relative;
+	z-index: -1;
+	background-image: url(./img/banner-bg.png);
+}
+
+.curousel .pic img {
+	width: 100%;
+	display: block;
+}
+
+.curousel .bottom {
+	width: 1000px;
+	height: 30px;
+	background-color: rgba(255, 255, 255, .5);
+	position: absolute;
+	bottom: 0;
+}
+
+.curousel ul {
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.curousel ul li {
+	width: 12px;
+	height: 12px;
+	background-color: white;
+	border-radius: 6px;
+	margin: 0 5px;
+}
+
+.curousel ul .active {
+	background-color: #fd4219;
+}
+
+.curousel .control {
+	width: 100%;
+	position: relative;
+}
+
+.curousel .left {
+	width: 40px;
+	height: 70px;
+	background-image: url(img/arr.png);
+	position: absolute;
+	/* 方案一 */
+	/* left: 0;
+	top: 50%;
+	transform: translateY(-50%); */
+	/* 方案二 */
+	/* left: 0;
+	top: 175px; */
+	/* 方案三 */
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.curousel .right {
+	width: 40px;
+	height: 70px;
+	background-image: url(img/arr.png);
+	background-position: -40px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* 5 公司业务 */
+/* 标题部分 */
+.yw h3{
+	margin-top: 50px;
+	font-size: 20px;
+	font-weight: 400;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 6px;
+}
+.yw h3 span{
+	font-size: 14px;
+	color: #83754e;
+}
+.yw ul{
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.yw ul li{
+	width: 196px;
+	height: 240px;
+	position: relative;
+	transition: 1s;
+}
+.yw ul li:hover{
+	transform: translateY(-5px);
+	box-shadow: 0 20px 20px 0 #ddd;
+}
+.yw ul li:nth-child(1){
+	background-image: url(img/btn1.jpg);
+}
+.yw ul li:nth-child(2){
+	background-image: url(img/btn2.jpg);
+}
+.yw ul li:nth-child(3){
+	background-image: url(img/btn3.jpg);
+}
+.yw ul li:nth-child(4){
+	background-image: url(img/btn4.jpg);
+}
+.yw ul li:nth-child(5){
+	background-image: url(img/btn5.jpg);
+}
+.yw .mask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .4);
+}
+.yw li .circel{
+	width: 90px;
+	height: 90px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.yw li p{
+	position: absolute;
+	width: 196px;
+	bottom: 30px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+
+/* 合作伙伴的css */
+.partner h3{
+	margin-top: 50px;
+	font-size: 20px;
+	font-weight: 400;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 6px;
+	margin-bottom: 34px;
+}
+.partner h3 span{
+	font-size: 14px;
+	color: #83754e;
+}
+.partner .box{
+	width: 1000px;
+	height: ;
+	overflow: hidden;
+}
+.partner .box ul{
+	width: 3000px;
+	display: flex;
+	justify-content: space-evenly;
+	animation: move 15s linear infinite;
+}
+.partner .box ul:hover{
+	animation-play-state: paused;
+}
+
+.partner .box ul li{
+	width: 200px;
+	text-align: center;
+}
+.partner .box ul li img{
+	width: 80%;
+}
+@keyframes move {
+	0%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(-2000px);
+	}
+}

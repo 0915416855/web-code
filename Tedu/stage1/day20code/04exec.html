@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 28px;
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button id="btn1">变长</button>
+		<button id="btn2">变短</button>
+		<script>
+			var length = 100 
+			btn1.onclick = function(){
+				length+=5
+				console.log(length)
+				var  str  = length +'px'
+				console.log(str)
+				box.style.width = str
+			}
+			btn2.onclick = function(){
+				length-=5
+				console.log(length)
+				var  str  = length +'px'
+				console.log(str)
+				box.style.width = str
+			}
+		</script>
+	</body>
+</html>

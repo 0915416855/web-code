@@ -1,0 +1,39 @@
+.news{
+	margin-top: 30px;
+	color: #666;
+	font-size: 14px;
+}
+.news ul li{
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 2px dashed #ddd;
+	padding: 0 10px;
+}
+.news ul li a{
+	color: #666;
+}
+.news ul li a:hover{
+	color: #d6105c;
+}
+.news ul li a::before{
+	content: "·";
+	margin-right: 5px;
+}
+.news .page{
+	display: flex;
+	justify-content: center;
+}
+.news .page span{
+	border: 1px solid #ddd;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	margin: 50px 5px;
+}
+.news .page span:first-child,
+.news .page span:hover{
+	background-color: #86754d;
+	color: #fff;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单练习</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" href="../css/bootstrap-icons.css"/>
+		<script src="../js/bootstrap.bundle.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<form>
+			  <div class="mb-3">
+			    <label for="uname" class="form-label">用户名</label>
+			    <input type="text" class="form-control" id="uname">
+			    <div class="form-text">请输入用户名</div>
+			  </div>
+			  <div class="mb-3">
+			    <label for="upwd" class="form-label">密码</label>
+			    <input type="password" class="form-control" id="upwd">
+			  </div>
+				<!-- 复选框 -->
+				<div class="mb-3">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+					  <label class="form-check-label" for="inlineCheckbox1">游泳</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+					  <label class="form-check-label" for="inlineCheckbox2">音乐</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+					  <label class="form-check-label" for="inlineCheckbox3">旅游 (disabled)</label>
+					</div>
+				</div>
+				<!-- 单选框 -->
+				<div class="mb-3">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="option1">
+					  <label class="form-check-label" for="inlineRadio1">男</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="option2">
+					  <label class="form-check-label" for="inlineRadio2">女</label>
+					</div>
+				</div>
+				<!-- 下拉菜单 -->
+				<select class="form-select mb-3">
+				  <option selected>个人爱好</option>
+				  <option value="1">游戏</option>
+				  <option value="2">写作</option>
+				  <option value="3">阅读</option>
+				</select>
+				<!-- 输入分组 -->
+				<div class="input-group mb-3" style="width: 400px;">
+				  <input type="text" class="form-control">
+				  <span class="input-group-text bg-primary text-white">输入分组</span>
+				</div>
+				<!--  -->
+				<div class="mb-3 form-check">
+				  <input type="checkbox" class="form-check-input" id="check">
+				  <label class="form-check-label" for="check">请勾选同意隐私协议</label>
+				</div>
+			  <button type="submit" class="btn btn-primary">提交</button>
+			</form>
+		</div>
+	</body>
+</html>

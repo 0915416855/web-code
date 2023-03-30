@@ -1,0 +1,23 @@
+$a:400px;
+$b:center;
+$c:#fff;
+$shadow:5px 7px 5px rgba(0,0,0,.5);
+$zts:red;
+.box{
+	width: $a;
+	height: $a;
+	text-align: $b;
+	color: $c;
+	background-color: $zts;
+	box-shadow: $shadow;
+	h2{
+		background-color: $zts;
+	}
+	button{
+		box-shadow: $shadow;
+		color: #fff;
+	}
+}
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 箭头函数 是在ES6的语法中对函数表达式的简写
+        // 对于声明函数不能使用
+        // 函数表达式  又叫做匿名函数 不需要单独定义 直接使用
+        // var fn1 = () => { 
+        //     console.log('箭头函数测试')
+        // }
+        // fn1()
+        /*
+        箭头函数的特殊之处
+            1，箭头函数某些时候可以省略 ()
+                只有一个形参的时候
+            2,箭头函数某些时候可以省略 {}
+                当代码只有一句话的时候，可以不写
+                并且会自动把这一句话当作函数的返回值
+            3,箭头函数内没有arguments
+            4，箭头函数 内部没有this，this指向外部作用域
+        */
+        //     //1, 
+        //    var fn1 = a => {
+        //     console.log('只有一个形参',a)
+        //    }
+        //    fn1(100)
+        var fn2 = (a,b) => a+b
+        console.log(fn2(100,200))
+    </script>
+</body>
+</html>

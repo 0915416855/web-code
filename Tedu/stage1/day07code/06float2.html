@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动高度坍塌</title>
+		<style>
+			.box{
+				width: 800px;
+				/* 1,给父级设置高度 */
+				/* height: 200px; */
+				/* 2,给父级设置BFC */
+				overflow:hidden;
+				border: 1px solid black;	
+			}
+			
+			.z1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				float: left;
+			}
+			.z2{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.z3{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				float: left;
+			}
+			/* 3 使用clearfix（清除修正）工具类 */
+			.clearfix::after{
+				content:''; /*在父元素内部生成一个空的假孩子*/
+				display: block; /*只有块级元素材料使用clear属性*/
+				/* 清除前面所有哥哥们朝两个方向浮动给父级造成的不支撑影响 */
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box clearfix">
+			<div class="z1"></div>
+			<div class="z2"></div>
+			<div class="z3"></div>
+		</div>	
+	</body>
+</html>

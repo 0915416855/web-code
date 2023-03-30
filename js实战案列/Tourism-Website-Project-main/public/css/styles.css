@@ -1,0 +1,522 @@
+body{
+    background: url(../img/background.jpg);
+}
+*{
+    margin: 0;
+    padding:0;
+}
+nav{
+    background-color: rgb(48, 222, 245);
+    padding: 10px;
+    font: 100;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+    width: 100%;
+    top: 0;
+    margin: 0px;
+    opacity: 0.8;
+}
+nav a{
+    font-size: 20pt;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8pt;
+}
+nav a:hover{
+    color: rgb(107, 243, 17);
+}
+.searchbtn{
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+.searchbtn:hover{
+    background-color: #f44336;
+    color: white;
+}
+.search-card-center {
+    opacity: 0.8;
+    background-color: #a9e7ff;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    padding: 1%;
+    margin: auto;
+    margin-top: 5%
+}
+#userTable{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#userInfoTable{
+    float: left;
+    font-size: large;
+    color: #150800;
+    background-color:#95f0d9;
+    display:block;
+    box-sizing: border-box;
+    /* text-align: center; */
+    width: 40%;
+    padding: 1%;
+    margin: 5%;
+    /* margin-top: 1%; */
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#functionEditor{
+    float: left;
+    font-size: large;
+    color: #150800;
+    background-color:#95f0d9;
+    display:block;
+    box-sizing: border-box;
+    /* text-align: center; */
+    width: 40%;
+    padding: 1%;
+    margin: 5%;
+    /* margin-top: 1%; */
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#functionEditor dt{
+    font-weight: bold;
+}
+#userInfoTable a:hover{
+    color:#f509c2;
+}
+#functionTable a:hover{
+    color:#f509c2;
+}
+#userInfoTable button{
+    width: 30%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+#userInfoTable button:hover{
+    background-color: red;
+    color: white;
+}
+#comments-editor{
+    overflow: hidden;
+    margin: auto;
+    width:20%;
+    font-size: large;
+    font-weight: bold;
+}
+.attraction_text{
+    overflow: hidden;
+
+}
+.attraction_img{
+    width: 30%;
+}
+.attraction_img img{
+    width:100%;
+    height:100%;
+}
+#comments-editor button{
+    overflow: hidden;
+    width: 20%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+#comments-editor button:hover{
+    background-color: red;
+    color: white; 
+}
+#comments-editor textarea{
+    width:50%;
+    height:30%;
+}
+#functionTable button{
+    overflow: hidden;
+    width: 40%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+ul li{
+    list-style:none;
+}
+#attractionDetailTable{
+    font-size: large;
+    font-weight: bold;
+    color: #150800;
+    background-color:#b4f6e6;
+    display:block;
+    box-sizing: border-box;
+    width: 40%;
+    padding: 1%;
+    margin: auto;
+    margin-top: 1%;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    opacity: 0.8;
+}
+#attractionDetailTitle{
+    text-align: center;
+}
+#attractionDetailTable img{
+    padding-left: 10%;
+}
+#functionTable button:hover{
+    background-color: red;
+    color: white;
+}
+.profileTitle{
+    text-align:center;
+    color: #f30808;
+}
+#functionH1 h1{
+    margin-top: 30%;
+}
+#functionTable{
+    overflow: hidden;
+    background-color:#95f0d9;
+    display:block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 20%;
+    padding: 1%;
+    margin: auto;
+    margin-top: 1%;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+}
+
+.search-card-center p{
+    font-size: 15pt;
+}
+.searchFields{
+    text-align: center;
+    margin-bottom: 27px;
+    width: 75%;
+    color:#001514;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #f7f9fa;
+}
+
+#searchTable{
+    text-align: center;
+    margin: auto;
+    padding: 10px 20px;
+    width: 50%;
+}
+.attraction p:first-child{
+    padding-top: 0;
+}
+.attraction p:last-child{
+    padding-bottom:0 ;
+}
+.attraction div{
+    background: rgb(248, 248, 248);
+    text-align: left;
+    height : 150px;
+}
+.attraction_text  {
+    padding-left:3%;
+    border-top-right-radius: 12.5px;
+    border-bottom-right-radius: 12.5px;
+    font-size: large;
+}
+.attraction{
+    border:3px groove #05f6f6;
+    border-top-right-radius: 12.5px;
+    border-bottom-right-radius: 12.5px;
+    border-left: 2px solid groove;
+    /* background-color: rgb(248, 248, 248); */
+}
+.attraction_text p{
+    width: 60%;
+    border-bottom:1px solid rgb(185, 178, 178);
+    font-size: 20px;
+    font-weight: 700;
+}
+#attractionTable{
+    padding: 0%;
+}
+.attraction:hover{
+    cursor: pointer;
+}
+
+.searchTerm{
+    color: #fbb105;
+    font-size: 48px;
+}
+
+#loginsignupTable{
+    margin:auto;
+    /* text-align: center; */
+    width:100%;
+    height:50%;
+    padding-top: 10%;
+    overflow: hidden;
+}
+#loginTable{
+    text-align: center;
+    float: left;
+    width: 50%;
+    margin: 2%;
+    border-right: 2px solid rgb(248, 248, 248);
+}
+#sighupTable{
+    /* border:2px solid rgb(248, 248, 248); */
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding-left: 50%;
+}
+
+#loginsignupTable input{
+    border-radius: 12.5px;
+    margin: 10px;
+    height: 20px;
+    border: 1px solid rgb(187, 58, 19);
+}
+#loginsignupTable button{
+    border-radius: 12.5px;
+    width: 15%;
+    height:20px;
+    text-align: center;
+    border: 1px solid rgb(187, 58, 19);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#loginsignupTable label{
+    color: #d1e7b7;
+    font-size: large;
+    font-weight: 500;
+}
+
+#loginsignupTable h1{
+    color:#fbb105
+}
+
+.logoutInfo{
+    text-align: center;
+    font-size: 24px;
+}
+.logoutInfo h2{
+    color:#01fa3f
+}
+.logoutInfo a{
+    color:gold;
+}
+.logoutInfo a:hover{
+    color:rgb(248, 248, 248)
+}
+
+
+#travelogueDetailTable{
+    overflow: hidden;
+    opacity: 0.8;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: block;
+    /* text-align: center; */
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    padding: 1%;
+    margin: auto;
+    margin-top: 5%
+}
+
+#travelogueDetailTable h1{
+    text-align: center;
+}
+
+
+#travelogueEditor{
+    overflow: hidden;
+    opacity: 0.8;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: block;
+    /* text-align: center; */
+    width: 55%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    padding: 1%;
+    margin: auto;
+    margin-top: 2%;
+}
+#travelogueEditor button{
+    overflow: hidden;
+}
+.tool-bar button{
+    border-radius: 7px;
+    width: 10%;
+    height:20px;
+    text-align: center;
+    border: 1px solid rgb(33, 53, 233);
+    font-size: 15px;
+    font-weight: bold;
+}
+.tool-bar button:hover{
+    background-color: rgb(25, 0, 255);
+    color: white;
+}
+#travelogueEditorTitle{
+    text-align: center;
+    margin-top: 5%;
+    color:#c1f0ed;
+}
+.travelogueTitle{
+    text-align: center;
+    height: 30px;
+}
+.travelogueTitle input{
+    border-radius: 7px;
+    height:60%
+}
+
+#editor{
+    background-color:rgb(245, 247, 248);
+    border: 1px solid #ccc;
+    height: auto;
+    width:100%;
+    outline: auto;
+    min-height: 500px;
+}
+#travelogueShowTable{
+    opacity: 0.8;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: block;
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    padding: 1%;
+    margin: auto;
+    margin-top: 5%;
+    font-size:30px;
+    font-weight: bold;
+}
+#show-comments{
+    height:500px;
+}
+#show-comments h2{
+    color:wheat;
+}
+.comment-card{
+    overflow: hidden;
+    font-size:auto;
+    float:left;
+    opacity: 0.8;
+    background-color: #a9e7ff;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 10%;
+    height:100px;
+    box-shadow: 0 4px 8px 0 rgba(218, 243, 149, 0.2);
+    border-radius: 15px;
+    /* padding: 1%; */
+    margin: 0.5%; 
+    border:2px solid #ceeceb
+}
+.comment-card dd{
+    word-break: break-all;
+    word-wrap: break-word;
+    width: auto;
+}
+
+.comment-card dt{
+    padding-top: 2%;
+}
+
+.searchSortBtn{
+    width:20%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ee0511;
+}
+.searchSortBtn:hover{
+    background-color: red;
+    color:white;
+}
+#submit-btn{
+    border-radius: 12.5px;
+    width: 15%;
+    height:20px;
+    text-align: center;
+    border: 1px solid rgb(187, 58, 19);
+    font-size: 15px;
+    font-weight: bold;
+}
+#signUp:hover{
+    background-color:red;
+    color:white;
+}
+#logIn:hover{
+    background-color:red;
+    color:white;
+}
+.error{
+    color:red;
+    font-size: 24px;
+    font-weight: bold;
+}

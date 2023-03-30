@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.bg {
+				width: 100vw;
+				height: 100vh;
+				background-image: url(./kugouimg/index/bg2.png);
+				background-size: cover;
+				overflow: hidden;
+				color: white;
+			}
+
+			.navbar {
+				width: 90vw;
+				margin: 3vh auto 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				/* background-color: aqua; */
+			}
+
+			.navbar .nav_module {
+				width: 8vw;
+			}
+
+			.navbar h2 {
+				font-size: 5.5vw;
+				color: white;
+			}
+
+			.user {
+				width: 90vw;
+				margin: 3vh auto 0 auto;
+				display: flex;
+				/* background-color: yellowgreen; */
+
+			}
+
+			.user img {
+				width: 15vw;
+			}
+
+			.user p {
+				margin: auto 4vw;
+				font-size: 3vh;
+				color: white;
+			}
+
+			.part3 {
+				width: 90vw;
+				margin-left: auto;
+				margin-right: auto;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 2vh;
+				margin-bottom: 2vh;
+			}
+
+			.part3_item {
+				width: 17vw;
+				/* background-color: yellowgreen; */
+				color: white;
+				font-size: 3.5vw;
+				text-align: center;
+			}
+
+			.part3_item img {
+				display: block;
+				height: 9vw;
+				margin-bottom: 2vh;
+				margin: 2vh auto;
+			}
+
+			.menu-module {
+				width: 90vw;
+				margin: 3vh auto 1vh auto;
+				/* background-color: yellowgreen; */
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				/* flex-direction: row; */
+			}
+
+			.menu-module div {
+				width: 23vw;
+				/* align-items: center; */
+				text-align: center;
+			}
+
+			.menu-module img {
+				width: 15vw;
+				/* align-items: center; */
+				margin: 0 auto;
+			}
+
+			.menu-module p {
+				margin: 1vh auto 1vh auto;
+				text-align: center;
+			}
+
+			.notice {
+				width: 90vw;
+				margin: 2vh auto 2vh auto;
+				/* background-color: yellow; */
+				display: flex;
+				justify-content: space-between;
+				/* border-top: 1px solid steelblue; */
+			}
+
+			.notice img {
+				width: 8vw;
+			}
+
+			.notice p {
+				margin: auto 0 auto;
+				font-size: 3vw;
+			}
+
+			hr {
+				background-color: deepskyblue;
+			}
+
+			.bot-menu {
+				width: 100vw;
+				position: fixed;
+				/* margin-bottom: 0; */
+				bottom: 0;
+				display: flex;
+				justify-content: space-between;
+				background-color: rgba(0, 0, 0, .5);
+			}
+
+			.bot-menu>img {
+				height: 15vw;
+			}
+
+			.bot-menu-right {
+				width: 82vw;
+			}
+
+			.bot-menu-right-bot {
+				/* width: 72vw; */
+				display: flex;
+				justify-content: space-between;
+				font-size: 3.5vw;
+
+			}
+
+			.bot-menu-right-bot>p {
+				margin: auto 0;
+			}
+
+			.bot-fun {
+				width: 40vw;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.bot-fun>img {
+				width: 5vw;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="navbar">
+				<img src="./kugouimg/index/menu.png" alt="" class="nav_module ">
+				<h2>听</h2>
+				<h2>看</h2>
+				<h2>唱</h2>
+				<img src="./kugouimg/index/fdj.png" alt="" class="nav_module ">
+			</div>
+			<div class="user">
+				<img src="./kugouimg/index/胡萝北.png" alt="">
+				<p>胡萝北</p>
+			</div>
+			<div class="part3">
+				<div class="part3_item">
+					<img src="./kugouimg/index/Computer.png" alt="">
+					<span>本地音乐</span>
+				</div>
+				<div class="part3_item">
+					<img src="./kugouimg/index/Heart.png" alt="">
+					<span>喜欢.歌单</span>
+				</div>
+				<div class="part3_item">
+					<img src="./kugouimg/index/Dwonload.png" alt="">
+					<span>下载</span>
+				</div>
+				<div class="part3_item">
+					<img src="./kugouimg/index/Time.png" alt="">
+					<span>最近</span>
+				</div>
+			</div>
+			<hr>
+			<div class="menu-module">
+				<div unit>
+					<img src="./kugouimg/index/music.png" alt="">
+					<p>乐 库</p>
+				</div>
+				<div unit>
+					<img src="./kugouimg/index/song.png" alt="">
+					<p>歌 单</p>
+				</div>
+				<div unit>
+					<img src="./kugouimg/index/chart.png" alt="">
+					<p>电台.酷群</p>
+				</div>
+				<div unit>
+					<img src="./kugouimg/index/radio.png" alt="">
+					<p>猜你喜欢</p>
+				</div>
+				<div unit>
+					<img src="./kugouimg/index/calendar.png" alt="">
+					<p>每日推荐</p>
+				</div>
+				<div unit>
+					<img src="./kugouimg/index/distinguish.png" alt="">
+					<p>听歌识曲</p>
+				</div>
+			</div>
+			<hr>
+			<div class="notice">
+				<img src="./kugouimg/index/volumen.png" alt="">
+				<p>装了这个APP，不用再去KTV</p>
+			</div>
+			<div class="bot-menu">
+				<img src="./kugouimg/index/专辑.png" alt="">
+				<div class="bot-menu-right">
+					<img src="./kugouimg/index/进度条.png" alt="">
+					<div class="bot-menu-right-bot">
+						<p>日落大道-歌手2017第···</p>
+						<div class="bot-fun">
+							<img src="./kugouimg/index/fast.png" alt="">
+							<img src="./kugouimg/index/fast.png" alt="">
+							<img src="./kugouimg/index/layout.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+	</body>
+</html>

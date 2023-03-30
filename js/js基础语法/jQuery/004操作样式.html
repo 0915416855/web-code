@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery/jquery.js"></script>
+    <style>
+        div{
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="width: 100px;;">
+
+    </div>
+
+    <script>
+        /*操作元素样式
+            css()    
+        */ 
+    // 1,css 获取样式
+    // 注意：可以获取到元素的行内样式，也可以获取到元素的非行内样式
+    // 语法：元素集合.css(要获取的样式名称)
+    // 返回值：改样式的样式值
+    // console.log($('div').css('width'))
+    // css()设置
+    // 语法：元素集合.长沙市（'样式名','样式值'）
+    // 注意：当你需要给一个元素设置样式值为px单位的时候，可以省略单位不写
+    // console.log($('div').css('height','500px'))
+    // css() 批量设置样式
+    // 语法：元素集合.css({对象内容})
+        $('div').css({
+            width:400,
+            height:400,
+            opacity:0.68,
+            'background-color':'purple'
+        })
+    </script>
+</body>
+</html>

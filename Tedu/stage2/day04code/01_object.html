@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自定义对象</title>
+	</head>
+	<body>
+		<script>
+			//对象字面量
+			var cup = {
+				color: 'white',
+				size: '4000ml',
+				shape: '圆柱形'
+			}
+
+			var com = {
+				id: 001,
+				title: '商品名1',
+				pic: '图片地址',
+				price: '2999.00'
+			}
+			// console.log(cup)
+			// console.log(com)
+
+			var user = {
+				uid: 001,
+				uname: '用户名',
+				sex: '0',
+				birthday: '1988-2-3',
+				salary: '9999.00',
+				'dept-id': '20'
+			}
+			// 访问属性
+			// console.log(user.uid)
+			// console.log(user.uname)
+			// console.log(user['dept-id'])
+			// 修改属性
+			user.salary = 40000
+			//添加属性
+			user.dname = '研发部'
+
+			// console.log(user)
+
+			var book = {
+				bid: 1,
+				bname: '书名',
+				author: '作者',
+				price: 200,
+			}
+
+			console.log(book.bname)
+			book.price = 20
+			book.press = '新华图书'
+			console.log(book)
+		</script>
+	</body>
+</html>

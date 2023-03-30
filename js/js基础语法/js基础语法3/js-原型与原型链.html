@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        原型
+            +向实例里添加方法 
+        原型链
+            问题1：实例对象（p1,p2）身上的__proto__指向谁？
+                => 指向所属构造函数的prototype，即Person的prototype
+            问题2：Person.prototype 的 __proto__ 指向谁？
+                => Person.prototype  所属的构造函数是谁
+                => 因为Person.prototype 是一个对象数据类型（Object）
+                => 在js内所有的Object数据类型都是属于Object 这个内置构造函数的
+                => Person.prototype 的 __proto__指向Object.prototype
+            问题3：Person 的 __proto__ 指向谁？
+                => Person 是一个函数，函数本身也是一个对象，就会有_proto__
+                => 在JS内，所有的函数都是属于内置构造函数Function 的实例
+                => Person.__proto__指向 Function.prototype
+            问题4：Object.prototype 的 __proto__ 指向谁？
+                => Object.prototype 在JS内叫做顶级原型，不在有__proto__
+                => Object.prototype 的 __proto__ 指向 null
+            问题5：Object 的 __proto__ 指向谁？
+                => Object 是一个内置构造函数，因此根据问题3，它是Function的实例
+                => 所以 Object.__proto__ 指向 Function.prototype
+            问题6： Function.prototype 的 __proto__指向谁？
+                => Function.prototype 是对象数据类型
+                => 在js内所有的Object数据类型都是属于Object 这个内置构造函数的
+                => Function.prototype 的 __proto__指向Object.prototype
+            问题7： Function 的 __proto__ 指向谁？
+                => Function 也是一个内置构造函数，也是一个函数
+                => 在JS内，所有的函数都是属于内置构造函数Function 的实例
+                => Function 自己是自己的构造函数
+                => Function 自己是自己的实例对象
+                => Function 自己是自己的构造函数
+                => Function.__proto__指向Function.prototype
+     -->
+</body>
+</html>

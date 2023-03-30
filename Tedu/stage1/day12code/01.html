@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			@keyframes transform-11{
+				from{transform:rotate(0deg)}
+				to{transform:rotate(360deg)}
+			}
+			#box:hover { animation: transform-11 1s infinite alternate;transform:rotate(0deg)}
+			/* 以下为box2的样式 */
+			.box2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				/* 动画属性：脚本名称 执行时间 */
+				animation: move 2s ;
+			}
+			@keyframes move {
+				0%{
+					transform: translateX(0);
+				}
+				100%{
+					transform: translateX(300px);
+					background-color: #0f0;
+					border-radius: 50%;
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<hr>
+		<div class="box2"></div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/../jQuery/jquery/jquery.js"> </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            border: 20px solid pink;
+            margin: 20px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        /*
+        获取元素尺寸
+        
+        */
+        //    1,width(),height()
+        console.log($('div').width())
+        console.log($('div').height())
+
+        //    2,innerwidth(),innerheight()
+        console.log($('div').innerWidth())
+        console.log($('div').innerHeight())
+
+        //    3,outerWidth(),outerHeight()
+        console.log($('div').outerWidth())
+        console.log($('div').outerHeight())
+    </script>
+</body>
+
+</html>

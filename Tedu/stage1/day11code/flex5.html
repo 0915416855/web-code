@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>单飞翼布局</title>
+		<style>
+			.box{
+				height: 300px;
+				background-color: red;
+				display: flex;
+			}
+			.lefrt{
+				width: 230px;
+				background-color: #0ff;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+			.right{
+				flex-grow: 1;
+				flex-shrink: 1;
+				background-color: #ff0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="lefrt">不放大不缩小</div>
+			<div class="right">会放大会缩小</div>
+		</div>
+	</body>
+</html>

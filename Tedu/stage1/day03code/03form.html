@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<form action="#" id="test">
+			用户名：<input type="text" maxlength="16" minlength="5" placeholder="请输入您的用户名" name="userName" value="kunkun"><br>
+			密码：<input type="password" placeholder="请输入您的密码" name="pwd" value="123"><br>
+			确认密码：<input type="password" placeholder="请确认您的密码" name="repwd" value="123"><br>
+			<input type="submit" value="提交注册按钮">
+			<input type="reset">
+			<input type="button" value="普通按钮">
+			<!-- 单选框 -->
+			<input type="radio" name="gender" value="1" checked>男
+			<input type="radio" name="gender" value="0">女
+			<br>
+			<!-- 多选框 -->
+			<input type="checkbox" name="like" value="0" checked>唱
+			<input type="checkbox" name="like" value="1">跳
+			<input type="checkbox" name="like" value="2">rap
+			<input type="checkbox" name="like" value="3">篮球
+			<!-- 文件上传 -->
+			<input type="file" multiple name="ufile">
+		</form>
+	</body>
+</html>

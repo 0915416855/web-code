@@ -1,0 +1,26 @@
+#wrapper #header .headerTop {
+  background: #eaeaea;
+  height: 30px;
+}
+#wrapper #header .headerTop .headTopMain {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+#wrapper #header .headerTop .headTopMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #header .headerTop .headTopMain .left h5 {
+  float: left;
+  margin-right: 5px;
+}
+#wrapper #header .headerTop .headTopMain .left p {
+  float: left;
+}
+#wrapper #header .headerTop .headTopMain .left p a:nth-child(1) {
+  border-right: 1px solid #b3aeab;
+  margin-right: 0px;
+  padding-right: 5px;
+}

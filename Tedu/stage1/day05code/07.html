@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<style>
+			div span{
+				background-color: green;
+			}
+			div>span{
+				background-color: pink;
+			}
+			div>p>span{
+				color: red;
+			}
+			div p span{
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>1</div>
+		<div>
+			<span>2</span>
+			<p>
+				<span>3</span>
+			</p>
+			<span>4</span>
+		</div>
+	</body>
+</html>

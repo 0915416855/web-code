@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数练习</title>
+	</head>
+	<body>
+		<script>
+			// 累加
+			function getSum(n) {
+				for (var i = 1, sum = 0; i <= n; i++) {
+					sum += i
+				}
+				return sum
+			}
+
+			// 
+			function getCount(byear, lyear) {
+				if(byear>lyear){
+					var n = 0
+					n = lyear
+					lyear = byear
+					byear = n
+				}
+				var count = 0
+				while (byear <= lyear) {
+					if (byear % 4 === 0 && byear % 100 !== 0 || byear % 400 === 0) {
+						count++
+					}
+					byear++
+				}
+				return count
+			}
+
+			console.log(getCount(2000, 2100))
+			console.log(getCount(1949, 2023))
+			console.log(getCount(2100, 2000))
+		</script>
+	</body>
+</html>

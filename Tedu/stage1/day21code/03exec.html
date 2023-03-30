@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">按钮1</button>
+		<span id="cont1">1</span>
+		<hr>
+		<button id="btn2">按钮2</button>
+		<span id="cont2">2</span>
+		<hr>
+		<button id="btn3">按钮3</button>
+		<span id="cont3">4</span>
+		<hr>
+		<script>
+			;(function(){
+				var a = 1
+				btn1.onclick = function() {
+					cont1.innerHTML = ++a
+				}
+			})()
+			;(function(){
+				var a = 2
+				btn2.onclick = function() {
+					cont2.innerHTML = ++a
+				}
+			})()
+			;(function(){
+				var a = 4
+				btn3.onclick = function() {
+					cont3.innerHTML = ++a
+				}
+			})()
+		</script>
+	</body>
+</html>

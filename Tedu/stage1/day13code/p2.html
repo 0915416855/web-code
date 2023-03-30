@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>媒体查询练习2</title>
+		<style>
+			div{
+				margin: 20px auto;
+				border-radius: 50%;
+				background-color: orange;
+			}
+			@media (min-width:576px){
+				body{
+					background-color: lightblue;
+				}
+				div{
+					width: 150px;
+					height: 150px;
+				}
+			}
+			@media(min-width:576px) and (max-width:768px){
+				body{
+					background-color: lightpink;
+				}
+				div{
+					width: 200px;
+					height: 200px;
+				}
+			}
+			@media (min-width:768px) and (max-width:992px){
+				body{
+					background-color: lightyellow;
+				}
+				div{
+					width: 250px;
+					height: 250px;
+				}
+			}
+			@media (min-width:992px) and (max-width:1200px){
+				body{
+					background-color: lightseagreen;
+				}
+				div{
+					width: 300px;
+					height: 300px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

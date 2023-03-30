@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 函数表达式：只存在声明提升。必须先写函数再调用
+			var f2 = function () {
+				console.log('我是一个匿名函数，保存在f2变量里')
+			}
+			f2()
+			// 1、函数整体提升
+			// 2、由于变量名与函数名重名，所以不提升了
+			// 3、所有的提升工作结束，变量c保存了一个函数值
+			// 4、c的值修改成了2
+			var c = 2
+			function c() {
+				console.log('hahha')
+			}
+			c()
+		</script>
+	</body>
+</html>

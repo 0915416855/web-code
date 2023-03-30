@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        ES6的展开运算符： ...
+        作用： 展开数组的[] 或者展开对象的{}
+        */ 
+    //测试
+    var arr = [100,200,300,4000]
+    console.log(arr)
+    console.log(...arr)
+    // 展开运算符常见作用
+    // 1，合并数组
+    var arr1 = [10,20]
+    var arr2 = [30,40]
+    var arr3 = [...arr1,...arr2]
+    console.log(...arr3)
+    // 2,给函数传递参数
+    var arr1 = [12,34,4,34,53,23]
+    var n = Math.max(...arr1)
+    console.log(n)
+
+    // 展开对象
+    // 用于复制对象
+    var obj = {
+        name : 'jack',
+        age : 18
+    }
+    // 注意：展开书写的顺序
+    var obj1 = {
+        gender : 'man',
+        ...obj
+    }
+    console.log(obj1)
+    </script>
+</body>
+</html>

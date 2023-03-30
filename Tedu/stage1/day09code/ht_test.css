@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.center {
+	width: 1000px;
+	margin: 0 auto;
+	/* background-color: yellow; */
+}
+
+header .hbox {
+	height: 100px;
+}
+
+header .hbox>img {
+	margin-top: 28px;
+}
+
+header .hbox .h-right {
+	float: right;
+	height: 28px;
+	margin-top: 36px;
+	font-size: 14px;
+	color: #666;
+	/* background-color: red; */
+	position: relative;
+}
+
+header .hbox .h-right .wxin {
+	float: left;
+	height: 28px;
+}
+
+header .hbox .h-right p {
+	float: left;
+	text-align: center;
+	line-height: 28px;
+	margin-right: 20px;
+}
+
+header .hbox .h-right input {
+	box-sizing: border-box;
+	float: right;
+	/* line-height: 25px; */
+	height: 28px;
+	border: 1px solid #666;
+	padding-left: 10px;
+	margin-right: 28px;
+}
+
+header .hbox .h-right .search {
+	position: absolute;
+	right: 0;
+}
+
+/* nav */
+nav {
+	background-color: #f5f2eb;
+	height: 40px;
+	/* overflow: hidden; */
+}
+
+nav .nav-item {
+	/* width: 90px; */
+	height: 40px;
+	float: left;
+	text-align: center;
+}
+
+nav .nav-item a {
+	display: block;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+	font-size: 14px;
+}
+
+.nav-item:hover a,
+.nav-item>.active {
+	background-image: linear-gradient(#d4011a, #970009);
+	color: #fff;
+}
+
+.nav-item ul{
+	height: 40px;
+	/* display: none; */
+	position: absolute;
+}
+
+.nav-item ul li {
+	width: 90px;
+	height: 40px;
+	text-align: center;
+	display: none;
+	/* float: left; */
+	line-height: 40px;
+	color: #fff;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, .4);
+	float: left;
+}
+
+.nav-item:hover li{
+	display: block;	
+}
+
+.nav-item:hover li:hover{
+	display: block;	
+	background-color: rgba(0, 0, 0, .6);
+}
+

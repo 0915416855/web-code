@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>溢出练习</title>
+		<style>
+			* {
+				margin: 0;
+				/* padding: 0; */
+			}
+
+			li {
+				list-style: none;
+				height: 25px;
+				padding: 10px 0;
+				border-bottom: 1px dashed gray;
+			}
+
+			.box {
+				background-color: aquamarine;
+				width: 350px;
+				height: 231px;
+				overflow: visible;
+				/*溢出可见*/
+				overflow: hidden;
+				/*溢出隐藏，超出部分直接裁掉*/
+				overflow: scroll;
+				/*溢出隐藏 增加拖拽条*/
+				overflow: auto;
+				/*溢出隐藏 自适应拖拽条*/
+			}
+
+			.box2 {
+				width: 500px;
+				height: 100px;
+				border: 1px solid black;
+				overflow: auto;
+			}
+			.move{
+				background-color: yellow;
+				width: 1300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li> 上海烁昕投资管理有限公司</li>
+				<li> 上海隽烁资产管理有限公司</li>
+				<li> 深圳诺金投资有限公司</li>
+				<li> 北京盈兆瑞丰商贸有限公司</li>
+				<li> 北京逸乐酒店管理有限公司</li>
+				<li> 北京祥云雅轩餐饮有限公司</li>
+				<li> 天津聚德成餐饮有限责任公司</li>
+				<li> 北京京盛典当行有限公司</li>
+				<li> 北京亿利恒丰投资管理有限公司</li>
+				<li> 北京汉唐凌和资本管理有限公司</li>
+				<li> 北京众融互联财富投资有限公司</li>
+			</ul>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div class="box2">
+			<div class="move">
+				<img src="./img/overflow/01.jpg" alt="">
+				<img src="./img/overflow/02.jpg" alt="">
+				<img src="./img/overflow/03.jpg" alt="">
+				<img src="./img/overflow/04.jpg" alt="">
+				<img src="./img/overflow/05.jpg" alt="">
+				<img src="./img/overflow/06.jpg" alt="">
+				<img src="./img/overflow/07.jpg" alt="">
+				<img src="./img/overflow/08.jpg" alt="">
+				<img src="./img/overflow/09.jpg" alt="">
+				<img src="./img/overflow/10.jpg" alt="">
+			</div>
+
+		</div>
+	</body>
+</html>

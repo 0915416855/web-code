@@ -1,0 +1,23 @@
+@mixin fangkuai100 {
+	width: 100px;
+	height: 100px;
+}
+.box1{
+	@include fangkuai100()
+	background-color: #f00;
+}
+.box2{
+	@include fangkuai100()
+	background-color: #fof;
+}
+
+@mixin bc_color($c){
+	background-color: $c;
+	color: $c;
+	border-color: $c;
+}
+
+.box3{
+	@include fangkuai100()
+	@include bc_color(red)
+}

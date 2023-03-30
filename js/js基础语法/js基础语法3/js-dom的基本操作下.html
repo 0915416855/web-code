@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        节点操作
+            1，创建节点 document.createElement（'标签名称'）
+            创建一个指定标签元素，返回值：一个创建好的元素节点
+            2,插入节点
+                语法1 父节点.appendChild（子节点）
+                把子节点放在父节点的内部，并且放在最后
+                语法2 父节点.insertBefore(要插入的子节点，哪一个子节点的前面)
+            3，删除节点
+                语法1 父节点.removeChild(子节点)  
+                语法2 父节点.remove 把父节点及包含的子节点全部删除 
+            4,替换节点
+                父节点.replaceChild(换上节点，换下节点)
+            5,克隆节点
+                节点.cloneNode(是否克隆后代节点)\
+        获取元素尺寸
+            语法1 元素,offsetHeight
+                  元素.offsetWidth
+            获取：元素的 内容 + padding + border 区域的尺寸
+            语法2 元素,clientHeight
+                  元素.clientWidth
+            获取：元素的 内容 + padding 区域的尺寸
+     -->
+    <div>
+        <p>内部标签</p>
+    </div>
+    <script>
+        var span = document.createElement('span')
+        span.innerText = '创建的标签'
+        console.log(span)
+        //要插入子节点，先获取父节点的信息
+        var div = document.querySelector('div')
+        //获取到要插入位置的子节点信息
+        var p = document.querySelector('p')
+        //插入子节点
+        // div.appendChild(span)
+        // div.insertBefore(span, p)
+        //删除 P 元素
+        // div.removeChild(p)
+        // 删除 div
+        // div.remove()
+        //使用创建的节点去替换原有的节点
+        // div.replaceChild(span, p)
+        // 克隆不带有后代节点
+        var clone1 = div.cloneNode(false)
+        // 克隆带有后代节点
+        var clone2 = div.cloneNode(true)
+        console.log(clone1)
+        console.log(clone2)
+    </script>
+</body>
+
+</html>

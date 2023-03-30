@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.fu1{
+				width: 100px;
+			}
+			span{
+				background-color: #ff0;
+				border: 1px solid #f00;
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			
+			/* 外间距的重叠现象 */
+			.fu2{
+				background-color: #0f0;
+				/* overflow: hidden; */
+				width: 120px;
+			}
+			.z1{
+				width: 100px;
+				height: 100px;
+				background-color: #f00;
+				float: left;
+			}
+			.z2{
+				width: 100px;
+				height: 100px;
+				background-color: #f00;
+				float: right;
+				margin: 50px 0;
+			}
+			.clearfix::after{
+				content: '';
+				display: block;
+				clear: both;
+				margin: 30px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fu1">
+			<span>1</span>
+			<span>2</span>
+		</div>
+		<hr>
+		<div class="fu2 clearfix">
+			<div class="z1"></div>
+			<div class="z2"></div>
+		</div>
+	</body>
+</html>

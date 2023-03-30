@@ -1,0 +1,88 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #D3DBCB;
+}
+
+.main{
+    width: 1068px;
+    height: 863px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+nav{
+    height: 57px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: gray;
+}
+
+button{
+    font-size: 30px;
+}
+
+#field{
+    margin: 100px auto 0 auto;
+}
+
+#field td{
+    width: 32px;
+    height:32px;
+    border:2px outset #ADA6A6;
+    text-align:center;
+    cursor:pointer;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+#field td:hover{
+    background-color:#AAA;
+}
+
+/*  为雷区  */
+.landMine{
+    background-image:url('./img/boom.png');
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*   鼠标右键点击标志 */
+.flag{
+    background-image:url('./img/flag.png');
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*  不是雷区，普通区  */
+.normal{
+    border:2px solid #EEE;
+    background-color:#AAA;
+}
+
+#level{
+    width: 280px;
+    height: 181px;
+    background-color: #ADA6A6;
+    margin: 200px auto;
+    overflow: hidden;
+    /* display: none; */
+}
+
+#level p{
+    margin: 15px 20px 0 20px;
+}
+#submint{
+    border: none;
+    border-radius: 5px;
+    background-color: #0C96F2;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+

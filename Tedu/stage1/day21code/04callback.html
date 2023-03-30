@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function xinRun (madai) {
+				console.log('程序一运行')
+				madai()
+				console.log('程序一停止')
+			}
+			function mingRun () {
+				console.log('程序二运行')
+				console.log('程序二停止')
+			}
+			function liangRun () {
+				console.log('程序三运行')
+				console.log('程序三停止')
+			}
+			xinRun(liangRun)
+			
+			// 调用函数时如果实参是匿名函数
+			// 由于没有名字，需要将匿名函数全部传入
+			xinRun(function(){
+				console.log('程序四运行')
+				console.log('程序四停止')
+			})
+		</script>
+	</body>
+</html>

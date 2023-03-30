@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        事件绑定的三要素
+        1，事件源：和谁做好约定
+        2，事件类型：约定一个什么行为
+        3，事件处理函数：当用户触发该行为的时候，执行什么代码
+        事件对象
+            事件对象内的信息-鼠标事件
+                坐标信息
+                1，offsetx  offsety  相对于触发事件的元素
+                2, clientx  clientY  相对于浏览器可视窗口的坐标点位
+                3, pageX   pageY     相对于页面文档流的坐标点位
+            事件对象内的信息-键盘事件
+                键盘编码   事件对象.keyCode
+     -->
+     <div></div>
+     <script>
+        //获取div元素
+        var div = document.querySelector('div')
+        //2.进行绑定事件
+        div.onclick = function () {
+            //3.执行点击发生时执行的代码
+            console.log('这是一个事件绑定的点击事件')
+        }
+     </script>
+</body>
+</html>

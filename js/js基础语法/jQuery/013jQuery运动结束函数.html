@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery/jquery.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>开始 动画</button>
+    <button>Stop</button>
+    <button>Finish</button>
+
+    <div></div>
+
+    <script>
+        /*
+        结束动画
+        +需要用到运动结束的函数
+        1.stop()
+        当任何一个元素，执行了stop方法以后，会立即停止当前所有运动
+        2.finish()
+        当任何一个元素，执行了finsh方法以后，会立即停止当前所有运动,直接跳到结尾
+        */
+        $('button:nth-child(1)').click(function(){
+            $('div').toggle(2000)
+        })
+        $('button:nth-child(2)').click(function(){
+            $('div').stop()
+        })
+        $('button:nth-child(3)').click(function(){
+            $('div').finish()
+        })
+    </script>
+</body>
+
+</html>

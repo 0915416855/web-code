@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #bg{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(270deg, aqua, lightgreen);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bg .content{
+            width: 400px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        #bg .content #time{
+            /* background-color: red; */
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            margin-top: 30px;
+        }
+        #bg .content #data{
+            /* background-color: yellow; */
+            text-align: center;
+            font-size: 30px;
+            font-family: "楷书";
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="bg">
+            <div class="content">
+                <p id="time">00:00:00</p>
+                <p id="data">mary</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        // 获取元素
+        var obj = document.getElementById('bg')
+        var time = document.getElementById('time')
+        var data = document.getElementById('data')
+
+        // 获取写入时间函数
+        function clock() {
+           // 获取时间
+        // 获取完整时间
+        var date = new Date()
+        console.log(date)
+        // 获取年份
+        var year = date.getFullYear()
+        //获取月份
+        var month = date.getMonth()+1
+        //获取日期
+        var day = date.getDate()
+        //获取星期
+        var week = date.getDay()
+        //获取小时
+        var hours = date.getHours()
+        //获取时分
+        var minutes = date.getMinutes()
+        // 获取秒
+        var seconds = date.getSeconds() 
+        
+        // 定义数组
+        time.innerHTML = hours+":"+minutes+":"+seconds 
+        data.innerHTML = year+"年"+month+"月"+day+"日"+"<br>"+"week："+week
+        }
+
+        // 计时器
+        setInterval(() => {
+            clock()
+        }, 1000);
+        
+    </script>
+</body>
+</html>

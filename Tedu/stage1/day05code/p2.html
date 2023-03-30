@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>伪元素</title>
+        <style>
+                ul{
+                        list-style: none;
+                }
+           h1::before{
+             content: 'xx';
+           }
+           h1::after{
+            content: 'yy';
+           }
+           li::before{
+             content: '子曰：';
+           }
+           li::after{
+             content: '--《论语》';
+           }
+           . r~a::before{
+              content: '>';     
+           }
+        </style>
+    </head>
+    <body>
+        <h1>ABC</h1><hr>
+        <ul>
+          <li>温故而知新，可以为师矣</li>
+          <li>见贤思齐焉，见不贤而自身也</li>
+          <li>学而不思则罔，思而不学则殆</li>      
+        </ul>
+        <div>
+                <a href="" class="r">首页</a>
+                <a href="">学习用品</a>
+                <a href="">笔记本电脑</a>
+                <a href="">戴尔燃7000</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,175 @@
+/*****所有汉唐二级页面模板的样式*****/
+/*****公共样式******/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.center {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/************** 1楼 header的CSS *************/
+.header {
+	height: 100px;
+	/* 辅助的背景色，用完删除 */
+	/* background-color: lightblue; */
+}
+
+.header .logo {
+	float: left;
+	margin-top: 28px;
+}
+
+.header .other {
+	float: right;
+	margin-top: 36px;
+}
+
+.header .other img {
+	float: left;
+	height: 28px;
+}
+
+.header .other>a {
+	float: left;
+	line-height: 28px;
+	color: #666;
+	font-size: 14px;
+}
+
+.header .other .search {
+	float: right;
+	margin-left: 20px;
+	position: relative;
+	width: 180px;
+}
+
+.header .search input {
+	/* 边框盒子一定要设置width */
+	width: 152px;
+	/* 切换成边框盒子的计算方案，这样加内间距不会影响总宽 */
+	box-sizing: border-box;
+	height: 28px;
+	padding-left: 10px;
+	padding-right: 40px;
+	border: 1px solid #666;
+	/* 去除外轮廓线 */
+	outline: none;
+}
+
+.header .search img {
+	width: 28px;
+	height: 28px;
+	/* 将放大镜图片定位到搜索区域的最右侧
+	 子绝父相，父级要设置非静态定位作为孩子移动的参照物*/
+	position: absolute;
+	/* right: 0; */
+}
+
+/************** 2楼 nav的CSS *************/
+/* 整个导航条 */
+nav {
+	background-color: #F5F2EB;
+	/* 给父元素一个高度还能解决失高问题 */
+	height: 40px;
+}
+
+/* 导航栏中的每一个导航项 包含a和ul */
+nav .nav-item {
+	width: 90px;
+	height: 40px;
+	/* 浮动让所有导航项横置 */
+	float: left;
+}
+
+/* 每个导航项中的a,比如"首页" */
+nav .nav-item>a {
+	display: block;
+	color: #666;
+	font-size: 14px;
+	/* 让块级元素中的文字水平居中 */
+	text-align: center;
+	/* 行高与单行文本等高，垂直居中 */
+	line-height: 40px;
+}
+
+/* 悬停在a上或激活项 修改样式 */
+.nav-item a:hover,
+.nav-item>.active {
+	color: #fff;
+	background-image: linear-gradient(#D4011A, #970009);
+}
+
+/* 导航项中的下拉菜单 */
+.nav-item ul {
+	background-color: rgba(0, 0, 0, .4);
+	color: #fff;
+	font-size: 14px;
+	/* 此时绝对定位的参照物找到了html */
+	position: absolute;
+	/* 顶部条+导航条的高度 */
+	top: 140px;
+	/* 要先消失，悬停时才出现 */
+	display: none;
+}
+
+/* 下拉菜单中的每一个菜单项 */
+.nav-item ul li {
+	width: 90px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+}
+
+/* 悬停的li背景色加深 */
+.nav-item ul li:hover {
+	background-color: rgba(0, 0, 0, .6);
+}
+
+/* 当悬停在整个导航项时，让此项对应的ul出现 */
+.nav-item:hover ul {
+	display: block;
+}
+
+/* 当悬停在下拉菜单时，紧挨着它的a是激活样式 */
+.nav-item ul:hover+a {
+	color: #fff;
+	background-image: linear-gradient(#D4011A, #970009);
+}
+
+/************** 3楼 banner的CSS *************/
+
+
+
+
+
+/************** 5楼 foot的CSS *************/
+.foot{
+	box-sizing: border-box;
+	height: 80px;
+	background-color: #83764f;
+	margin-top: 100px;
+	padding-top: 20px;
+}
+.foot p{
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}

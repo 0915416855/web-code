@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var nums = [2, 7, 11, 15]
+			var target = 9
+			console.log(nums.length)
+			var twoSum = function(nums, target) {
+				// console.log(nums)
+				// var len = nums.length
+				for (var i = 0; i < nums.length; i++) {
+					for (var j = i + 1; j < nums.length; j++) {
+						var num = nums[i] + nums[j]
+						if (num === target) {
+							console.log(i, j)
+							var nub = [i, j]
+							return nub
+						}
+					}
+				}
+			};
+			twoSum(nums, target)
+		</script>
+	</head>
+	<body>
+		<p>（一）资产管理业务特色</p>
+		<div>
+			<img src="img/zichan1.jpg" alt="">
+			<img src="img/zichan2.jpg" alt="">
+			<img src="img/zichan3.jpg" alt="">
+			<img src="img/zichan4.jpg" alt="">
+		</div>
+		<p>（二）资产管理产品</p>
+		<img src="http://www.codece.cn/themes/hantang/images/zichan5.jpg" alt="">
+	</body>
+</html>

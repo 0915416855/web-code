@@ -1,0 +1,11 @@
+body {
+  background-color: yellow; }
+
+.mydiv {
+  width: 250px;
+  background-color: #fff; }
+  .mydiv h3 {
+    font-size: 18px; }
+  .mydiv img {
+    display: block;
+    width: 100%; }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="close">关闭定时器</button>
+    <script>
+        //   setInterval(function run() {
+        //     console.log('doing')
+        //   },1000)  
+        //   setTimeout(() => {
+        //     console.log('doing')
+        //   }, 3000);
+        var timer1 = setInterval(function () {
+            console.log('doing')
+        }, 1000);
+        var timer2 = setTimeout(function () {
+            console.log('doing2')
+        }, 3000);
+
+        close.onclick = function () {
+            clearInterval(timer1)
+            clearTimeout(timer2)
+        }
+    </script>
+    <!-- 
+        定时器
+        1，间隔定时器  setInterval
+        2，延时定时器  setTimeout
+        关闭定时器
+        clearInterval
+         clearTimeout
+     -->
+</body>
+
+</html>

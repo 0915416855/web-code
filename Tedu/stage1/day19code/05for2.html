@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>循环嵌套</title>
+	</head>
+	<body>
+		<script>
+			// for (var i = 1,str='';i<=5;i++) {
+			// 	str +='*'
+			// }
+			// console.log(str)
+
+			// for(var i = 1 ; i<=3 ;i++){
+			// 	console.log('外层'+i)
+			// 	for(var j =1 ; j<=5;j++){
+			// 		console.log('66')
+			// 	}
+			// }
+			// for(var j=1;j<=3;j++){
+			// 	for (var i = 1,str='';i<=5;i++) {
+			// 		str +='*'
+			// 	}
+			// 	console.log(str)
+			// }
+
+			// for(var j=1;j<=3;j++){
+			// 	for (var i = 1,str='';i<=j;i++) {
+			// 		str +='*'
+			// 	}
+			// 	console.log(str)
+			// }
+			for (var i = 1; i <= 9; i++) {
+				for (var j = 1,str = ' '; j <= i; j++) {
+					str += j + '*' + i + '=' + (i * j) + ' '
+					if((i===3||i===4)&&j===2){
+						str += ' '
+					}
+				}
+				console.log(str)
+			}
+		</script>
+	</body>
+</html>

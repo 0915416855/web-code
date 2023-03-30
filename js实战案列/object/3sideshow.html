@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: gainsboro;
+        }
+
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .box {
+            display: flex;
+            width: 870px;
+            height: 480px;
+            padding: 2px 1px;
+            margin: 15vh auto;
+            text-align: center;
+            /* background-color: red; */
+            justify-content: space-around;
+            flex-direction: row;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .8);
+        }
+
+        .box>ul {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .box>ul>li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            
+            left: 0;
+            top: 0;
+            opacity: 0;
+            /* 动画过渡 */
+            transition: opacity .5s linear;
+        }
+
+        .box>ul>li.active {
+            opacity: 1;
+        }
+
+        .box>ol {
+            width: 200px;
+            height: 15px;
+            position: absolute;
+            /* left: center; */
+            bottom: 15vh;
+            background-color: rgba(0, 0, 0, .3);
+            /* 弹性盒布局 */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 7.5px;
+        }
+
+        .box>ol>li {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .box>ol>li.active {
+            background-color: orange;
+        }
+
+        .left {
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            /* margin: 10px; */
+            /* font-size: 15px; */
+            line-height: 30px;
+            position: absolute;
+            left: 20%;
+            top: 50vh;
+            font-size: 30px;
+            color: white;
+        }
+
+        .right {
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            /* margin: 10px; */
+            /* font-size: 15px; */
+            line-height: 30px;
+            position: absolute;
+            right: 20%;
+            top: 50vh;
+            font-size: 30px;
+            color: white;
+        }
+
+        .left:hover,.right:hover {
+            background-color: rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="boxMain">
+        <ul class="picture">
+            <li class="active"><img src="./img/3sideshow/01.png" alt=""></li>
+            <li><img src="./img/3sideshow/02.png" alt=""></li>
+            <li><img src="./img/3sideshow/03.png" alt=""></li>
+            <li><img src="./img/3sideshow/04.png" alt=""></li>
+            <li><img src="./img/3sideshow/05.png" alt=""></li>
+        </ul>
+        <ol>
+            <li data-i="0" data-name="point" class="active"></li>
+            <li data-i="1" data-name="point"></li>
+            <li data-i="2" data-name="point"></li>
+            <li data-i="3" data-name="point"></li>
+            <li data-i="4" data-name="point"></li>
+        </ol>
+        <div class="left">&lt;</div>
+        <div class="right">&gt;</div>
+    </div>
+    <script>
+        var imgs = document.querySelectorAll('ul>li')
+        var points = document.querySelectorAll('ol>li')
+        console.log(imgs.length)
+        console.log(points)
+
+        //准备一个变量，表示当前第几张，默认是0，因为默认显示索引第0张
+        var index = 0
+        //书写切换一张的函数
+        //约定：
+        //参数为true切换下一张
+        //参数为false切换上一张
+        //参数为数字切换到指定张
+        function changeOne(type) {
+            //1，让当前张消失
+            imgs[index].className = ''
+            points[index].className = ''
+            //2，根据type传递的参数，来切换index的值
+            if (type === true) {
+                index++
+            }
+            else if (type === false) {
+                index--
+            }
+            else {
+                index = type
+            }
+            //判定index的边界值
+            if (index >= imgs.length) {
+                index = 0
+            }
+            if (index < 0) {
+                index = imgs.length - 1
+            }
+            //3，让改变后的这一张显示
+            imgs[index].className = 'active'
+            points[index].className = 'active'
+        }
+
+        // 定点击事件
+        boxMain.onclick = function (e) {
+            var e = e || window.event; //浏览器兼容性 
+            var elem = e.target || e.srcElement;
+            console.log(elem.className)
+            //切换按钮
+            if(elem.className == 'left'){
+                changeOne(false)
+            }else if(elem.className == 'right'){
+                changeOne(true)
+            }
+        }
+
+        // 焦点绑定点击事件
+
+        // 计时器自动切换
+        setInterval(function(){
+            changeOne(true)
+        },5000)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>项目属性</title>
+		<style>
+			.container {
+				background-color: lightblue;
+				display: flex;
+			}
+			.item,.example {
+				width: 200px;
+				height: 200px;
+				border: 2px solid #f00;
+				font-size: 30px;
+			}
+			.item:nth-child(2){
+				/* flex-grow: 1; */
+				flex-shrink:1;
+			}
+			.item:nth-child(3){
+				/* flex-grow: 2; */
+				flex-shrink: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="example">参考大小200px</div>
+		<div class="container">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+			<div class="item">6</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        解构赋值
+            快速从对象或者数组中获取成员
+        解构赋值分成两种
+            1，数组的解构赋值
+            2，对象的解构赋值
+     -->
+     <script>
+        // 解构数组
+        var arr = ['heelo','word']
+        var [a,b] = arr
+        console.log(a)
+        console.log(b)
+        //解构对象
+        var obj = {name:'jacdk',age:'18'}
+        var {name} = obj
+        // 别名
+        var {age:a} = obj
+        console.log(name)
+        console.log(a)
+     </script>
+</body>
+</html>

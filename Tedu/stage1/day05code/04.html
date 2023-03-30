@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>兄弟选择器</title>
+		<style>
+			p+span{
+				color: green;
+			}
+			p~span{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<span>span1</span>
+		<p>0</p>
+		<span>span2</span>
+		<div>
+			<span>span3</span>
+		</div>
+		<span>span4</span>
+	</body>
+</html>

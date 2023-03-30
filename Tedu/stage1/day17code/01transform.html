@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>强制类型转换</title>
+	</head>
+	<body>
+		<script>
+			// number()--将传入的值转为数字
+			var n1 = Number('3')
+			var n2 = Number(true)
+			var n3 = Number(false)
+			var n4 = Number(null)
+			var n5 = Number('3a')
+			var n6 = Number(undefined)
+			console.log(n1, n2, n3, n4, n5, n6)
+			
+			// parseInt()转整型
+			var p1 = parseInt(3.5)
+			var p2 = parseInt('6a')
+			var p3 = parseInt('a6')
+			var p4 = parseInt(null)
+			console.log(p1)
+			console.log(p2)
+			console.log(p3)
+			console.log(p4)
+			
+			//parseFloat() 转浮点型
+			var f1 = parseFloat('3.14a')
+			var f2 = parseFloat('a3.14')
+			var f3 = parseFloat('75')
+			console.log(f1,f2,f3)
+		</script>
+	</body>
+</html>

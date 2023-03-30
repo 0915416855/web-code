@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.bg {
+				width: 100vw;
+				height: 100vh;
+				background-image: url(kugouimg/start/bg1.png);
+				background-size: cover;
+				overflow: hidden;
+			}
+
+			.center {
+				width: 76vw;
+				/* height: 20vh; */
+				/* background-color: #ff00ff; */
+				margin: 25vh auto;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.login {
+				/* display: inline; */
+				width: 25vw;
+			}
+
+			.text {
+				width: 48vw;
+				/* padding-left: 6vw; */
+				margin: auto 0;
+			}
+
+			h1 {
+				color: #fff;
+				font-size: 12vw;
+				margin-bottom: 2vw;
+			}
+
+			p {
+				font-size: 5vw;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="center">
+				<img src="kugouimg/start/logo.png" alt="" class="login">
+				<div class="text">
+					<h1>酷狗音乐</h1>
+					<p>音 乐 总 有 新 玩 法</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			// 启动页面定时跳转
+			setTimeout("window.location.href = 'login.html'", 5000);
+			//防止页面后退
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+		</script>
+	</body>
+</html>

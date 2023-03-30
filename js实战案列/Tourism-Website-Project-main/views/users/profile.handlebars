@@ -1,0 +1,148 @@
+<main>
+  <div id="userTable">
+  <h1 class="profileTitle">User Info Card</h1>
+  <div id="userInfoTable">
+  <article class="post">
+      <div>
+          <h2>User {{user._id}}</h2>
+          <p>Username: firstName: {{ user.userName.firstName }}, lastName: {{user.userName.lastName}}</p>
+          <p>Email: {{user.email}}</p>
+          <p>Gender: {{user.gender}}</p>
+      </div>
+      <div>    
+      <form id="profile-form" method="post" action="/users/private">
+        <div id="userInfo" hidden>
+            <div>
+              <div>
+                <label for="input-firstName">User First Name</label>
+                <input type="text" id="input-firstName" name="userFirstName">
+              </div>
+            <div>
+              <label for="input-lastName">User Last Name</label>
+              <input type="text" id="input-lastName" name="userLastName">
+            </div>
+            <div>
+              <label for="input-gender">Gender</label>
+              <select id="input-gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="input-password">Change password</label>
+              <input type="text" id="input-password" name="password">
+            </div>
+            <div class="profile-group">
+              {{#if hasErrors}}
+            <p class="error">{{error}}</p>
+              {{/if}}
+            </div>
+            </div>
+            <div class="profile-group">
+              <button type="submit" class="submit-btn" id="submit-change">submit</button>
+              <button type="button" id="cancelSubmitProfile">cancel</button>
+            </div>
+        </div>
+        <button type="button" class="submit-btn" id="edit">edit</button>
+        <input name="_method" value="patch" hidden/>
+      </form>
+      <a href="/delete/users/{{user._id}}">Delete this account!!</a>
+      </div>
+  </article>
+  </div>
+  <div id="functionEditor">
+            <dl>
+              <dt>Comments:</dt> 
+              <dd> 
+                <ul> 
+                    {{#each Comments}}
+                    <li>Rating:{{this.rating}}<br>
+                    Comment:{{this.comment}}
+                    <a href="/comments/update/{{this._id}}">Re-edit</a> <a href="/delete/userComments/{{this._id}}">Delete</a></li>
+                    {{/each}}
+                </ul> 
+              </dd> 
+              <dt>Spots:</dt> 
+              <dd> 
+                <ul> 
+                    {{#each spots}}
+                    <li>
+                      <a href="/attractions/found/{{this._id}}">{{this.description.Name}}</a>
+                      <a href="/delete/userAttractions/{{this._id}}">Delete</a>
+                    </li>
+                    {{/each}}
+                </ul> 
+              </dd> 
+              <dt>travelogue:</dt> 
+              <dd> 
+                <ul> 
+                    {{#each Travelogues}}
+                    <li><a href="/travelogues/found/{{this._id}}">{{this.travelogue.title}}</a>  <a href="/delete/userTravelogues/{{this._id}}">Delete</a></li>
+                    {{/each}}
+                </ul> 
+              </dd> 
+              {{#if isAdmin}}
+              <dt>Delete Information:</dt> 
+              <dd> 
+                <ul> 
+                    {{#each DeleteInfo}}
+                    <li>Time: {{this.Time}}</li>
+                    <li>Type: {{this.Type}}</li>
+                    <li>Information: {{this.Information}}</li>
+                    <br>
+                    {{/each}}
+                </ul> 
+              </dd> 
+              {{/if}}
+          </dl>
+  </div>
+  </div>
+  <div id="functionH1">
+  <h1 class="profileTitle">Write your own attractions or travelogue!</h1>
+  <div id="functionTable">
+  <form id="attraction-form" method="post" action="/attractions/add">
+          <button type="button" class="submit-btn" id="addAttraction">add Attraction</button>
+          <div id="attractionInfo" class="attraction-group" hidden>
+              <div>
+                <label for="input-attraction-name">Attraction Name : </label>
+                <input type="text" id="input-attraction-name" name="attractionName">
+              </div>
+                <label for="input-attraction-category">Attraction Category : </label>
+                <input type="text" id="input-attraction-category" name="attractionCategory">
+              <div>
+                <label for="input-attraction-img">Attraction Img URL : </label>
+                <input type="url" id="input-attraction-img" name="attractionImg">
+              </div>
+                <label for="input-attraction-address">Attraction Address : </label>
+                <input type="text" id="input-attraction-address" name="attractionAddress">
+              <div>
+                <label for="input-attraction-rating">Attraction Rating : </label>
+                <input type="number" id="input-attraction-rating" name="attractionRating" min="0" max="5">
+              </div>
+                <label for="input-attraction-price">Attraction Price : </label>
+                <input type="number" id="input-attraction-price" name="attractionPrice" min="0">
+            <div> 
+                <label for="input-attraction-content">Attraction Content : </label>
+                <textarea id="input-attraction-content" name="attractionContent"></textarea>
+            </div>
+            <div>
+            <button type="submit" class="submit-btn" id="submit-new-attraction">submit</button>
+            <button type="button" class="submit-btn" id="cancel-new-attraction">cancel</button>
+            </div>
+          </div>
+        </form>
+          <a href="/travelogues/add"> Write Travelogue</a>
+  </div>
+  </div>
+
+
+<script>
+    localStorage.setItem('pageDeriveFrom', "profile");
+</script>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+  <script src="/public/js/profile.js"></script>
+  <script src="/public/js/inputCheck.js"></script>
+</main>

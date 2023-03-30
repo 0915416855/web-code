@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        原型 prototype
+            + 定义：每一个函数天生自带一个属性，叫做prototype，是一个对象
+            + 构造函数也会有这个自带空间
+        对象
+            定义：每一个对象，在你访问它的成员的时候吧，如果自己没有这个属性
+            =》会自动去锁定胡构造函数的prototype上查找
+            自定义构造函数也一样
+     -->
+    <script>
+        function Person(){}
+        Person.prototype.sayHi = function(){
+            console.log('原型方法')
+        }
+        console.log(Person.prototype)
+        // 创建一个实例
+        var obj1 = new Person()
+        console.log(obj1)
+        obj1.sayHi()
+    </script>
+</body>
+</html>

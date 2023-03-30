@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css优先级测试</title>
+		<!--  -->
+		<style>
+			* {
+				color: red ;
+			}
+
+			p {
+				color: orange;
+			}
+
+			.text {
+				color: yellow;
+			}
+
+			#text {
+				color: green;
+			}
+			.c1{
+				color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="text" id="text" style="color: darkcyan;">测试文字</p>
+		<span class="c1 c2">选择器权值累加</span>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+.invest {
+	margin-top: 30px;
+}
+
+.invest h3 {
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.invest h3 span {
+	font-size: 14px;
+}
+.invest table td{
+	overflow: hidden;
+}
+.invest table tr td:first-child{
+	font-size: 14px;
+	color: #666;
+	height: 24px;
+	text-align: right;
+	padding-right: 10px;
+}
+.invest table input{
+	box-sizing: border-box;
+	width: 220px;
+	height: 24px;
+	margin: 5px 0;
+	border: 1px solid #ddd;
+	outline: none;
+	padding: 3px 5px;
+}
+.invest table textarea{
+	resize: none;
+	box-sizing: border-box;
+	width: 550px;
+	height: 110px;
+	margin: 5px 0;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	outline: none;
+}
+.invest table .yzm{
+	margin-left: 5px;
+	vertical-align: middle;
+}
+.invest table .btn{
+	float: left;
+	width: 80px;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 14px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.invest .submitBtn{
+	background-color: #d10f0f;
+}
+.invest .resetBtn{
+	background-color: #666;
+}
+.invest table .btn img{
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 5px;
+	/* 默认图片与右侧的文字是基线对齐，我们需要调整成顶线对齐，再通过文字行高调整二者在垂直方向居中对齐 */
+	vertical-align: top;
+}
+.invest table .btn span{
+	line-height: 30px;
+	padding-left: 8px;
+}

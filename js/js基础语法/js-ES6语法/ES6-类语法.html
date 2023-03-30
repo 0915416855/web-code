@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        ES6 类语法 必须和new关键字连用
+            语法 ：
+            class 类名{
+                // 这里相当于ES5上的构造函数体
+                constructor(){
+
+                }
+            // 直接书写原型上的方法
+            }
+        */ 
+    //    类的书写
+     class person{
+        constructor(name,age){
+            this.name = name
+            this.age = age
+        }
+        sayHi(){
+            console.log('hello word')
+        }
+        // 书写静态属性和方法 添加关键字 static
+        static a = 100
+        static go(){
+            console.log('running')
+        }
+     }
+     var p1 = new person('jack',18)
+     console.log(p1)
+     p1.sayHi()
+     p1.go()
+    
+    </script>
+</body>
+</html> 
